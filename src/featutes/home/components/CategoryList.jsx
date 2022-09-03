@@ -10,7 +10,7 @@ function CategoryList(props) {
         <Typography
           variant="h3"
           fontWeight={700}
-          sx={{ py: 3, textAlign: "center" }}
+          sx={{ mb: 1, textAlign: "center" }}
         >
           Danh mục sản phẩm
         </Typography>

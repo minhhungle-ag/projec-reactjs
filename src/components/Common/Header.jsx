@@ -2,7 +2,7 @@ import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { alpha, Stack } from "@mui/material";
+import { Stack, useTheme } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -12,7 +12,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import PropTypes from "prop-types";
 const pages = [
   { label: "Trang chủ", link: "trang-chu" },
   { label: "Sản phẩm", link: "san-pham" },
@@ -20,10 +22,17 @@ const pages = [
   { label: "Liên hệ", link: "lien-he" },
 ];
 
-export function Header() {
+Header.propTypes = {
+  onChangeMode: PropTypes.func,
+};
+
+export function Header({ onChangeMode }) {
+  const theme = useTheme();
+
   return (
     <AppBar
       position="fixed"
+      color="inherit"
       sx={{
         "& a": {
           color: "inherit",
@@ -104,6 +113,18 @@ export function Header() {
 
           <IconButton size="large" color="inherit">
             <ShoppingCartOutlinedIcon fontSize="medium" />
+          </IconButton>
+
+          <IconButton
+            sx={{ ml: 1 }}
+            onClick={() => onChangeMode?.()}
+            color="inherit"
+          >
+            {theme.palette.mode === "dark" ? (
+              <Brightness7Icon />
+            ) : (
+              <Brightness4Icon />
+            )}
           </IconButton>
         </Toolbar>
       </Container>

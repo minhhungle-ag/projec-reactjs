@@ -4,9 +4,9 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { productList } from "../../../constants/common";
 import ProductCard from "../../../components/Common/ProductCard";
 
-BestSell.propTypes = {};
+SaleOf.propTypes = {};
 
-function BestSell(props) {
+function SaleOf(props) {
   return (
     <Box>
       <Container>
@@ -15,7 +15,7 @@ function BestSell(props) {
           fontWeight={700}
           sx={{ mb: 1, textAlign: "center" }}
         >
-          Sản phẩm bán chạy
+          Sản phẩm giảm giá
         </Typography>
 
         <Stack direction="row" flexWrap="wrap" sx={{ mx: -2 }}>
@@ -32,4 +32,4 @@ function BestSell(props) {
   );
 }
 
-export default BestSell;
+export default SaleOf;

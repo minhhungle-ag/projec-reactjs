@@ -116,7 +116,7 @@ function Banner(props) {
             borderRadius: 4,
 
             backgroundColor: "primary.main",
-            color: "white",
+            color: "inherit",
             overflow: "hidden",
 
             "&:hover": {

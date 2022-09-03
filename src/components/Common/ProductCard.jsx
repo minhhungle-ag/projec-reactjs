@@ -12,8 +12,6 @@ function ProductCard({ product }) {
     <Box
       boxShadow={1}
       sx={{
-        border: "2px solid",
-        borderColor: "transparent",
         borderRadius: "4px",
 
         backgroundColor: (theme) => alpha(theme.palette.common.white, 0.1),
@@ -22,9 +20,10 @@ function ProductCard({ product }) {
         cursor: "pointer",
 
         "&:hover": {
-          borderColor: "primary.main",
-          boxShadow:
-            "0px 6px 8px -4px rgba(221, 88, 255, 0.2), 0px 10px 16px 3px rgba(221, 88, 255, 0.14), 0px 4px 24px 6px rgba(221, 88, 255, 0.12)",
+          "& img": {
+            transform: "scale(1.1)",
+          },
+          boxShadow: `0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)`,
         },
       }}
     >
@@ -52,7 +51,12 @@ function ProductCard({ product }) {
           />
         </Box>
 
-        <Box sx={{ p: 2, flexGrow: 1 }}>
+        <Box
+          sx={{
+            p: 2,
+            flexGrow: 1,
+          }}
+        >
           <Typography variant="body1">{product.subtitle}</Typography>
 
           <Typography variant="h6" fontWeight={700}>
@@ -63,7 +67,7 @@ function ProductCard({ product }) {
             Giá: {formatPrice(product.price)}
           </Typography>
 
-          <Typography variant="body1">
+          <Typography variant="body2">
             {truncateText(product.description, 80)}
           </Typography>
         </Box>

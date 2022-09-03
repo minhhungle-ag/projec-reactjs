@@ -9,19 +9,15 @@ CategoryCard.propTypes = {
 function CategoryCard({ category }) {
   return (
     <Box
-      boxShadow={3}
+      boxShadow={1}
       sx={{
-        border: "2px solid",
-        borderColor: "transparent",
         borderRadius: 1,
-        backgroundColor: (theme) => alpha(theme.palette.common.white, 0.1),
+        backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.5),
         backdropFilter: " blur(20px)",
         overflow: "hidden",
 
         "&:hover": {
-          borderColor: "primary.main",
-          boxShadow:
-            "0px 6px 8px -4px rgba(221, 88, 255, 0.2), 0px 10px 16px 3px rgba(221, 88, 255, 0.14), 0px 4px 24px 6px rgba(221, 88, 255, 0.12)",
+          boxShadow: `0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)`,
         },
       }}
     >

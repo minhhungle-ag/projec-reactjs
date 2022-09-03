@@ -73,7 +73,7 @@ function ProductCard({ product }) {
               `Màng hình: ${product?.info?.screen} | CPU: ${product?.info?.CPU} |
             Card: ${product?.info?.card} | Pin: ${product?.info?.battery} | Khối
             lượng: ${product?.info?.weight}`,
-              80
+              100
             )}
           </Typography>
         </Stack>

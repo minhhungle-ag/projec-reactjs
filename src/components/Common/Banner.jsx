@@ -137,7 +137,7 @@ function Banner(props) {
                   flexWrap="wrap"
                   sx={{
                     px: { xs: 4, md: 8.5 },
-                    py: { xs: 4, md: 0 },
+                    pt: { xs: 4, md: 0 },
                   }}
                 >
                   <Stack
@@ -173,7 +173,7 @@ function Banner(props) {
                       src={item.thumbnailUrl}
                       alt={`banner`}
                       width="100%"
-                      height="100"
+                      height="100%"
                     />
                   </Box>
                 </Stack>

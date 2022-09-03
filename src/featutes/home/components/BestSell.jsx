@@ -18,10 +18,10 @@ function BestSell(props) {
           Sản phẩm bán chạy
         </Typography>
 
-        <Stack direction="row" flexWrap="wrap" sx={{ mx: -2 }}>
+        <Stack direction="row" flexWrap="wrap" sx={{ mx: -1 }}>
           {productList.map((item, idx) => (
-            <Box sx={{ width: { xs: "100%", sm: 1 / 2, md: 1 / 3 } }}>
-              <Box sx={{ p: 2 }}>
+            <Box sx={{ width: { xs: "100%", sm: 1 / 2, md: 1 / 4 } }}>
+              <Box sx={{ p: 1 }}>
                 <ProductCard product={item} />
               </Box>
             </Box>

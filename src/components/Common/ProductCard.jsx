@@ -51,7 +51,8 @@ function ProductCard({ product }) {
           />
         </Box>
 
-        <Box
+        <Stack
+          spacing={0.5}
           sx={{
             p: 2,
             flexGrow: 1,
@@ -63,14 +64,19 @@ function ProductCard({ product }) {
             {product.title}
           </Typography>
 
-          <Typography variant="body1" fontStyle="italic">
+          <Typography variant="body1" fontStyle="italic" fontWeight={500}>
             Giá: {formatPrice(product.price)}
           </Typography>
 
           <Typography variant="body2">
-            {truncateText(product.description, 80)}
+            {truncateText(
+              `Màng hình: ${product?.info?.screen} | CPU: ${product?.info?.CPU} |
+            Card: ${product?.info?.card} | Pin: ${product?.info?.battery} | Khối
+            lượng: ${product?.info?.weight}`,
+              80
+            )}
           </Typography>
-        </Box>
+        </Stack>
       </Stack>
     </Box>
   );

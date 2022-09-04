@@ -6,81 +6,45 @@ import {
   Stack,
   ThemeProvider,
 } from "@mui/material";
-import { amber, grey } from "@mui/material/colors";
 import PropTypes from "prop-types";
-import React, { createContext, useMemo, useState } from "react";
+import React, { useState } from "react";
+import Footer from "../Common/Footer";
 import Header from "../Common/Header";
 
 MainLayout.propTypes = {
   children: PropTypes.node,
 };
 
-const ColorModeContext = createContext({ toggleColorMode: () => {} });
-
-const getDesignTokens = (mode) => ({
-  palette: {
-    mode,
-    ...(mode === "light"
-      ? {
-          // palette values for light mode
-          primary: amber,
-          divider: amber[300],
-          background: {
-            default: amber[50],
-            paper: amber[400],
-          },
-          text: {
-            // primary: "#fff",
-            secondary: grey[800],
-          },
-        }
-      : {
-          // palette values for dark mode
-          primary: grey,
-          divider: grey[200],
-          background: {
-            default: grey[900],
-            paper: grey[800],
-          },
-          text: {
-            primary: "#fff",
-            secondary: grey[800],
-          },
-        }),
-  },
-});
-
 function MainLayout({ children }) {
   const [mode, setMode] = useState("light");
-  const colorMode = useMemo(
-    () => ({
-      // The dark mode switch would invoke this method
-      toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-      },
-    }),
-    []
-  );
 
-  // Update the theme only if the mode changes
-  let theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+  let theme = createTheme({
+    palette: {
+      mode: mode,
+    },
+  });
+
   theme = responsiveFontSizes(theme);
 
-  return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Stack
-          sx={{
-            minHeight: "100vh",
-          }}
-        >
-          <Header onChangeMode={colorMode.toggleColorMode} />
+  function handleChangeMode() {
+    setMode(mode === "light" ? "dark" : "light");
+  }
 
-          <Box>{children}</Box>
-        </Stack>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Stack
+        sx={{
+          minHeight: "100vh",
+        }}
+      >
+        <Header onChangeMode={handleChangeMode} mode={mode} />
+
+        <Box>{children}</Box>
+
+        <Footer />
+      </Stack>
+    </ThemeProvider>
   );
 }
 

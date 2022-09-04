@@ -1,10 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { productList } from "../../../constants/common";
+import React from "react";
 import ProductCard from "../../../components/Common/ProductCard";
-
-SaleOf.propTypes = {};
+import { productList } from "../../../constants/common";
 
 function SaleOf(props) {
   return (
@@ -15,13 +12,13 @@ function SaleOf(props) {
           fontWeight={700}
           sx={{ mb: 1, textAlign: "center" }}
         >
-          Sản phẩm giảm giá
+          Sản phẩm đang giảm giá
         </Typography>
 
-        <Stack direction="row" flexWrap="wrap" sx={{ mx: -1 }}>
+        <Stack direction="row" flexWrap="wrap" sx={{ mx: -2 }}>
           {productList.map((item, idx) => (
-            <Box sx={{ width: { xs: "100%", sm: 1 / 2, md: 1 / 4 } }}>
-              <Box sx={{ p: 1 }}>
+            <Box sx={{ width: { xs: "100%", sm: 1 / 2, md: 1 / 4 } }} key={idx}>
+              <Box sx={{ p: 2 }}>
                 <ProductCard product={item} />
               </Box>
             </Box>

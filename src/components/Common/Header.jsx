@@ -1,8 +1,10 @@
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { Stack, useTheme } from "@mui/material";
+import { Stack } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -10,11 +12,10 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
 import * as React from "react";
 import { Link, NavLink } from "react-router-dom";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
-import PropTypes from "prop-types";
+
 const pages = [
   { label: "Trang chủ", link: "trang-chu" },
   { label: "Sản phẩm", link: "san-pham" },
@@ -24,15 +25,13 @@ const pages = [
 
 Header.propTypes = {
   onChangeMode: PropTypes.func,
+  mode: PropTypes.string,
 };
 
-export function Header({ onChangeMode }) {
-  const theme = useTheme();
-
+export function Header({ onChangeMode, mode }) {
   return (
     <AppBar
       position="fixed"
-      color="inherit"
       sx={{
         "& a": {
           color: "inherit",
@@ -120,11 +119,7 @@ export function Header({ onChangeMode }) {
             onClick={() => onChangeMode?.()}
             color="inherit"
           >
-            {theme.palette.mode === "dark" ? (
-              <Brightness7Icon />
-            ) : (
-              <Brightness4Icon />
-            )}
+            {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
         </Toolbar>
       </Container>

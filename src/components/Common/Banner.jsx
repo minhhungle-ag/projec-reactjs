@@ -9,13 +9,11 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { grey } from "@mui/material/colors";
-import debounce from "lodash.debounce";
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const bannerList = [
   {
@@ -114,10 +112,8 @@ function Banner(props) {
             position: "relative",
             width: "100%",
             borderRadius: 4,
-
-            backgroundColor: "primary.main",
-            color: "inherit",
-            overflow: "hidden",
+            backgroundColor: (theme) => alpha(theme.palette.common.white, 0.1),
+            backdropFilter: "20px",
 
             "&:hover": {
               ".prev": {

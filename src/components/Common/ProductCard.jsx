@@ -1,6 +1,6 @@
-import React from "react";
+import { Box, Card, Stack, Typography } from "@mui/material";
 import PropTypes from "prop-types";
-import { alpha, Box, Stack, Typography } from "@mui/material";
+import React from "react";
 import { formatPrice, truncateText } from "../../utils/common";
 
 ProductCard.propTypes = {
@@ -9,21 +9,16 @@ ProductCard.propTypes = {
 
 function ProductCard({ product }) {
   return (
-    <Box
-      boxShadow={1}
+    <Card
       sx={{
         borderRadius: "4px",
-
-        backgroundColor: (theme) => alpha(theme.palette.common.white, 0.1),
-        backdropFilter: " blur(20px)",
-        overflow: "hidden",
         cursor: "pointer",
 
         "&:hover": {
           "& img": {
             transform: "scale(1.1)",
           },
-          boxShadow: `0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)`,
+          boxShadow: (theme) => theme.shadows[10],
         },
       }}
     >
@@ -31,8 +26,10 @@ function ProductCard({ product }) {
         <Box
           sx={{
             position: "relative",
+            width: "100%",
             height: 0,
             pt: "56.25%",
+            overflow: "hidden",
           }}
         >
           <Box
@@ -78,7 +75,7 @@ function ProductCard({ product }) {
           </Typography>
         </Stack>
       </Stack>
-    </Box>
+    </Card>
   );
 }
 

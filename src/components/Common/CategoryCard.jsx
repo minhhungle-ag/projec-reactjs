@@ -1,6 +1,6 @@
-import React from "react";
+import { Box, Card, Stack, Typography } from "@mui/material";
 import PropTypes from "prop-types";
-import { alpha, Box, Stack, Typography } from "@mui/material";
+import React from "react";
 
 CategoryCard.propTypes = {
   category: PropTypes.object,
@@ -8,16 +8,12 @@ CategoryCard.propTypes = {
 
 function CategoryCard({ category }) {
   return (
-    <Box
-      boxShadow={1}
+    <Card
       sx={{
         borderRadius: 1,
-        backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.5),
-        backdropFilter: " blur(20px)",
-        overflow: "hidden",
 
         "&:hover": {
-          boxShadow: `0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)`,
+          boxShadow: (theme) => theme.shadows[10],
         },
       }}
     >
@@ -53,7 +49,7 @@ function CategoryCard({ category }) {
           </Typography>
         </Box>
       </Stack>
-    </Box>
+    </Card>
   );
 }
 

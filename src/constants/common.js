@@ -166,3 +166,45 @@ export const productList = [
     },
   },
 ];
+
+export const categoryMenu = [
+  {
+    label: "Máy tính bàn",
+  },
+  {
+    label: "Laptop",
+  },
+  {
+    label: "Màng hình",
+  },
+  {
+    label: "Linh kiện",
+  },
+];
+
+export const pageList = [
+  { label: "Trang chủ", link: "trang-chu" },
+  { label: "Sản phẩm", link: "san-pham" },
+  { label: "Giới thiệu", link: "gioi-thieu" },
+  { label: "Liên hệ", link: "lien-he" },
+];
+
+export const footerPageList = [
+  { label: "Giới thiệu", link: "gioi-thieu" },
+  { label: "Liên hệ", link: "lien-he" },
+];
+
+export const socialList = [
+  {
+    label: "Instagram",
+  },
+  {
+    label: "Facebook",
+  },
+  {
+    label: "LinkedIn",
+  },
+  {
+    label: "Youtube",
+  },
+];

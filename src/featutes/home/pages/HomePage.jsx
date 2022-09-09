@@ -1,4 +1,4 @@
-import { Box, Container, Divider } from "@mui/material";
+import { Box } from "@mui/material";
 import Banner from "../../../components/Common/Banner";
 import AccessoryList from "../components/AccessoryList";
 import BestSell from "../components/BestSell";

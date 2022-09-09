@@ -4,6 +4,7 @@ import AccessoryList from "../components/AccessoryList";
 import BestSell from "../components/BestSell";
 import CategoryList from "../components/CategoryList";
 import ComputerCompany from "../components/ComputerCompany";
+import OtherList from "../components/OtherList";
 import SaleOf from "../components/SaleOf";
 
 function HomePage(props) {
@@ -31,6 +32,10 @@ function HomePage(props) {
 
       <Box sx={{ my: 3 }}>
         <SaleOf />
+      </Box>
+
+      <Box sx={{ my: 3 }}>
+        <OtherList />
       </Box>
     </Box>
   );

@@ -12,14 +12,14 @@ function ComputerCompany(props) {
         alignItems="center"
         justifyContent="space-between"
         flexWrap="wrap"
-        sx={{ py: 3, px: -2 }}
+        sx={{ py: 3, mx: -2 }}
       >
         {computerList.map((item, idx) => (
-          <Box sx={{ width: 1 / 4, borderRadius: "4px", p: 2 }}>
-            <Box boxShadow={1}>
+          <Box sx={{ width: 1 / 4, p: 2 }}>
+            <Box boxShadow={1} sx={{ bgcolor: "white" }}>
               <Box
                 key={idx}
-                sx={{ width: "100%", borderRadius: "4px" }}
+                sx={{ width: "100%" }}
                 component="img"
                 src={item}
               />

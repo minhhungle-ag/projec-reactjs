@@ -17,7 +17,7 @@ function BestSell(props) {
 
         <Stack direction="row" flexWrap="wrap" sx={{ mx: -2 }}>
           {productList
-            .filter((item, idx) => idx < 4)
+            .filter((item, idx) => idx < 8)
             .map((item, idx) => (
               <Box
                 sx={{ width: { xs: "100%", sm: 1 / 2, md: 1 / 4 } }}

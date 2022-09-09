@@ -2,29 +2,67 @@ import { v4 as uuid } from "uuid";
 export const categoryList = [
   {
     thumbnailUrl:
-      "https://assets.website-files.com/61dc3065b01374683eceee5d/62028b0600efe2383e89ce48_Mac%20Book%204.png",
-    title: "Laptop cũ",
-    subtitle: "Laptop văn phòng",
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_laptops_062022.jpg",
+    title: "Laptop",
   },
 
   {
     thumbnailUrl:
-      "https://assets.website-files.com/61dc3065b01374683eceee5d/62028b0600efe2383e89ce48_Mac%20Book%204.png",
-    title: "Laptop cũ",
-    subtitle: "Laptop văn gamming",
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_desktops_062022.jpg",
+    title: "Máy tính bàn",
   },
+  {
+    thumbnailUrl:
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_11_2021APPLE500.jpg",
+    title: "Sản phẩm Apple",
+  },
+  {
+    thumbnailUrl:
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_monitors_062022a.jpg",
+    title: "Màng hình",
+  },
+];
 
+export const accessoryList = [
   {
     thumbnailUrl:
-      "https://assets.website-files.com/61dc3065b01374683eceee5d/62028b0600efe2383e89ce48_Mac%20Book%204.png",
-    title: "Máy bàn like new",
-    subtitle: "Máy bàn văn phòng",
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_videoCards500.jpg",
+    title: "Card màng hình",
   },
   {
     thumbnailUrl:
-      "https://assets.website-files.com/61dc3065b01374683eceee5d/62028b0600efe2383e89ce48_Mac%20Book%204.png",
-    title: "Máy bàn like new",
-    subtitle: "Máy bàn văn phòng",
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_IntelAMDProcessors500.jpg",
+    title: "CPU",
+  },
+  {
+    thumbnailUrl:
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_motherboards_062022.jpg",
+    title: "Main",
+  },
+  {
+    thumbnailUrl:
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_ssds_062022.jpg",
+    title: "SSD",
+  },
+  {
+    thumbnailUrl:
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_memory_062022.jpg",
+    title: "Ram",
+  },
+  {
+    thumbnailUrl:
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_PowerSupplies500_062022.jpg",
+    title: "Nguồn máy tính",
+  },
+  {
+    thumbnailUrl:
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_cooling_500.jpg",
+    title: "Fan led",
+  },
+  {
+    thumbnailUrl:
+      "https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_ComputerCases500_062022.jpg",
+    title: "Case PC",
   },
 ];
 
@@ -207,4 +245,15 @@ export const socialList = [
   {
     label: "Youtube",
   },
+];
+
+export const computerList = [
+  "https://cdn.tgdd.vn/Brand/2/logo-asus-149x40.png",
+  "https://cdn.tgdd.vn/Brand/2/logo-hp-149x40-1.png",
+  "https://cdn.tgdd.vn/Brand/2/logo-lenovo-149x40.png",
+  "https://cdn.tgdd.vn/Brand/2/logo-acer-149x40.png",
+  "https://cdn.tgdd.vn/Brand/2/logo-dell-149x40.png",
+  "https://cdn.tgdd.vn/Brand/2/logo-msi-149x40.png",
+  "https://cdn.tgdd.vn/Brand/2/logo-macbook-149x40.png",
+  "https://cdn.tgdd.vn/Brand/2/logo-intel-149x40.png",
 ];

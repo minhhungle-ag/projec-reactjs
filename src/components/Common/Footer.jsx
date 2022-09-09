@@ -48,7 +48,7 @@ function Footer(props) {
                     textDecoration: "none",
                   }}
                 >
-                  An Thịnh Phát
+                  Khải PC
                 </Typography>
               </Link>
             </Stack>

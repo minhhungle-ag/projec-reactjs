@@ -1,7 +1,9 @@
 import { Box, Container, Divider } from "@mui/material";
 import Banner from "../../../components/Common/Banner";
+import AccessoryList from "../components/AccessoryList";
 import BestSell from "../components/BestSell";
 import CategoryList from "../components/CategoryList";
+import ComputerCompany from "../components/ComputerCompany";
 import SaleOf from "../components/SaleOf";
 
 function HomePage(props) {
@@ -12,20 +14,20 @@ function HomePage(props) {
       </Box>
 
       <Box sx={{ my: 3 }}>
-        <CategoryList />
+        <ComputerCompany />
       </Box>
 
-      <Container>
-        <Divider />
-      </Container>
+      <Box sx={{ my: 3 }}>
+        <CategoryList />
+      </Box>
 
       <Box sx={{ my: 3 }}>
         <BestSell />
       </Box>
 
-      <Container>
-        <Divider />
-      </Container>
+      <Box sx={{ my: 3 }}>
+        <AccessoryList />
+      </Box>
 
       <Box sx={{ my: 3 }}>
         <SaleOf />

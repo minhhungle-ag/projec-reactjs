@@ -67,9 +67,7 @@ export function Header({ onChangeMode, mode }) {
                 textDecoration: "none",
               }}
             >
-              <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                An Thịnh Phát
-              </Box>
+              <Box sx={{ display: { xs: "none", sm: "block" } }}>Khải PC</Box>
 
               <Box sx={{ display: { sm: "none" } }}>ATP</Box>
             </Typography>

@@ -22,7 +22,7 @@ function CategoryCard({ category }) {
           sx={{
             position: "relative",
             height: 0,
-            pt: "56.25%",
+            pt: "100%",
           }}
         >
           <Box
@@ -41,11 +41,9 @@ function CategoryCard({ category }) {
           />
         </Box>
 
-        <Box sx={{ p: 2, flexGrow: 1 }}>
-          <Typography variant="body1">{category.title}</Typography>
-
-          <Typography variant="h6" fontWeight={700}>
-            {category.subtitle}
+        <Box sx={{ p: 2, pt: 0, flexGrow: 1, textAlign: "center" }}>
+          <Typography variant="h6" fontWeight={400}>
+            {category.title}
           </Typography>
         </Box>
       </Stack>

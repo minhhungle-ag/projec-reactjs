@@ -12,7 +12,7 @@ function App() {
     <MainLayout>
       <Box
         sx={{
-          paddingTop: { xs: '66px', sm: '86px', md: '123px' },
+          paddingTop: { xs: '66px', sm: '86px', md: '138px' },
         }}
       />
       <Routes>

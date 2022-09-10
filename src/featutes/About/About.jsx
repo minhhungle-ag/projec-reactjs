@@ -19,16 +19,17 @@ tính cá nhân`,
 function About(props) {
   return (
     <Box>
-      <Container>
-        <Box sx={{ my: 2 }}>
-          <Box
-            component="img"
-            width="100%"
-            src="https://assets.website-files.com/61d6d915d860cc3d5935aeef/61e179351c3b200659e6960f_About%20Us%20Image%202-min%20(1).jpg"
-            alt="about"
-          />
-        </Box>
+      <Box>
+        <Box
+          component="img"
+          width="100%"
+          maxHeight="450px"
+          src="https://assets.website-files.com/61d6d915d860cc3d5935aeef/61e179351c3b200659e6960f_About%20Us%20Image%202-min%20(1).jpg"
+          alt="about"
+        />
+      </Box>
 
+      <Container>
         <Stack direction="row" sx={{ my: 3, mx: -2 }} flexWrap="wrap">
           <Box sx={{ width: { xs: '100%', sm: 1 / 2 } }}>
             <Stack sx={{ maxWidth: '80%', p: 2 }}>

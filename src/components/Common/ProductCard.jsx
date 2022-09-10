@@ -25,7 +25,7 @@ function ProductCard({ product }) {
             position: 'relative',
             width: '100%',
             height: 0,
-            pt: '100%',
+            pt: '56.25%',
             overflow: 'hidden',
           }}
         >

@@ -2,7 +2,7 @@ import { Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Stack } 
 import PropTypes from 'prop-types'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { menuList } from '../../constants/menuList'
+import { pageList } from '../../constants/menuList'
 import Logo from './Logo'
 
 SideBar.propTypes = {
@@ -35,7 +35,7 @@ function SideBar({ mobileOpen, onClose }) {
       <Divider />
 
       <List>
-        {menuList.map((item, idx) => (
+        {pageList.map((item, idx) => (
           <ListItem
             disablePadding
             onClick={() => onClose?.()}
@@ -51,7 +51,7 @@ function SideBar({ mobileOpen, onClose }) {
             }}
           >
             <NavLink
-              to={`/san-pham/${item.link}`}
+              to={item.link}
               key={idx}
               className={({ isActive }) => (isActive ? 'active' : '')}
             >

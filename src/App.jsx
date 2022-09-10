@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Toolbar } from '@mui/material'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import NotFound from './components/Common/NotFound'
 import MainLayout from './components/Layouts/MainLayout'
@@ -10,11 +10,7 @@ import Products from './featutes/products/pages/Products'
 function App() {
   return (
     <MainLayout>
-      <Box
-        sx={{
-          paddingTop: { xs: '66px', sm: '86px', md: '138px' },
-        }}
-      />
+      <Toolbar />
       <Routes>
         <Route path="/" element={<Navigate to="trang-chu" />} />
         <Route path="trang-chu" element={<HomePage />} />

@@ -1,23 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import {
-  alpha,
-  Divider,
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Stack,
-} from "@mui/material";
-import { pageList } from "../../constants/common";
-import { NavLink } from "react-router-dom";
-import Logo from "./Logo";
+import { Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { menuList } from '../../constants/menuList'
+import Logo from './Logo'
 
 SideBar.propTypes = {
   mobileOpen: PropTypes.bool,
   onClose: PropTypes.func,
-};
+}
 
 function SideBar({ mobileOpen, onClose }) {
   return (
@@ -29,12 +20,12 @@ function SideBar({ mobileOpen, onClose }) {
         keepMounted: true, // Better open performance on mobile.
       }}
       sx={{
-        display: { xs: "block", md: "none" },
-        "& a": {
-          textDecoration: "none",
-          color: "inherit",
+        display: { xs: 'block', md: 'none' },
+        '& a': {
+          textDecoration: 'none',
+          color: 'inherit',
         },
-        "& .MuiDrawer-paper": { boxSizing: "border-box", width: "70%" },
+        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '70%' },
       }}
     >
       <Stack direction="row" justifyContent="center" sx={{ p: 1 }}>
@@ -44,27 +35,27 @@ function SideBar({ mobileOpen, onClose }) {
       <Divider />
 
       <List>
-        {pageList.map((item, idx) => (
+        {menuList.map((item, idx) => (
           <ListItem
             disablePadding
             onClick={() => onClose?.()}
             sx={{
-              "& a": {
-                width: "100%",
-                color: "inherit",
-                textDecoration: "none",
+              '& a': {
+                width: '100%',
+                color: 'inherit',
+                textDecoration: 'none',
               },
-              ".active": {
-                bgcolor: "primary.light",
+              '.active': {
+                bgcolor: 'primary.light',
               },
             }}
           >
             <NavLink
-              to={item.link}
+              to={`/san-pham/${item.link}`}
               key={idx}
-              className={({ isActive }) => (isActive ? "active" : "")}
+              className={({ isActive }) => (isActive ? 'active' : '')}
             >
-              <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemButton sx={{ textAlign: 'center' }}>
                 <ListItemText primary={item.label} />
               </ListItemButton>
             </NavLink>
@@ -72,7 +63,7 @@ function SideBar({ mobileOpen, onClose }) {
         ))}
       </List>
     </Drawer>
-  );
+  )
 }
 
-export default SideBar;
+export default SideBar

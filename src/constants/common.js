@@ -223,8 +223,8 @@ export const categoryMenu = [
 export const pageList = [
   { label: "Trang chủ", link: "trang-chu" },
   { label: "Sản phẩm", link: "san-pham" },
-  { label: "Giới thiệu", link: "gioi-thieu" },
-  { label: "Liên hệ", link: "lien-he" },
+  // { label: "Giới thiệu", link: "gioi-thieu" },
+  // { label: "Liên hệ", link: "lien-he" },
 ];
 
 export const footerPageList = [

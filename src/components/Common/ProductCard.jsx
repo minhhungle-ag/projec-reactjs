@@ -1,23 +1,20 @@
-import { Box, Card, Stack, Typography } from "@mui/material";
-import PropTypes from "prop-types";
-import React from "react";
-import { formatPrice, truncateText } from "../../utils/common";
+import { Box, Card, Stack, Typography } from '@mui/material'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { formatPrice, truncateText } from '../../utils/common'
 
 ProductCard.propTypes = {
   product: PropTypes.object,
-};
+}
 
 function ProductCard({ product }) {
   return (
     <Card
       sx={{
-        borderRadius: "4px",
-        cursor: "pointer",
+        borderRadius: '4px',
+        cursor: 'pointer',
 
-        "&:hover": {
-          "& img": {
-            transform: "scale(1.1)",
-          },
+        '&:hover': {
           boxShadow: (theme) => theme.shadows[10],
         },
       }}
@@ -25,11 +22,11 @@ function ProductCard({ product }) {
       <Stack>
         <Box
           sx={{
-            position: "relative",
-            width: "100%",
+            position: 'relative',
+            width: '100%',
             height: 0,
-            pt: "56.25%",
-            overflow: "hidden",
+            pt: '100%',
+            overflow: 'hidden',
           }}
         >
           <Box
@@ -37,13 +34,13 @@ function ProductCard({ product }) {
             src={product.thumbnailUrl}
             alt={product.thumbnailUrl}
             sx={{
-              position: "absolute",
+              position: 'absolute',
               top: 0,
               left: 0,
               right: 0,
               bottom: 0,
-              width: "100%",
-              height: "100%",
+              width: '100%',
+              height: '100%',
             }}
           />
         </Box>
@@ -76,7 +73,7 @@ function ProductCard({ product }) {
         </Stack>
       </Stack>
     </Card>
-  );
+  )
 }
 
-export default ProductCard;
+export default ProductCard

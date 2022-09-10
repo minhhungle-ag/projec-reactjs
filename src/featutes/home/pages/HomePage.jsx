@@ -1,11 +1,9 @@
-import { Box } from "@mui/material";
-import Banner from "../../../components/Common/Banner";
-import AccessoryList from "../components/AccessoryList";
-import BestSell from "../components/BestSell";
-import CategoryList from "../components/CategoryList";
-import ComputerCompany from "../components/ComputerCompany";
-import OtherList from "../components/OtherList";
-import SaleOf from "../components/SaleOf";
+import { Box } from '@mui/material'
+import Banner from '../../../components/Common/Banner'
+import { accessoryList, categoryList, productList } from '../../../constants/common'
+import CategoryList from '../components/CategoryList'
+import ComputerCompany from '../components/ComputerCompany'
+import ProductList from '../components/ProductList'
 
 function HomePage(props) {
   return (
@@ -19,26 +17,18 @@ function HomePage(props) {
       </Box>
 
       <Box sx={{ my: 3 }}>
-        <CategoryList />
+        <CategoryList title="Danh mục sản phẩm" categoryList={categoryList} />
       </Box>
 
       <Box sx={{ my: 3 }}>
-        <BestSell />
+        <CategoryList title="Danh mục phụ kiện" categoryList={accessoryList} />
       </Box>
 
       <Box sx={{ my: 3 }}>
-        <AccessoryList />
-      </Box>
-
-      <Box sx={{ my: 3 }}>
-        <SaleOf />
-      </Box>
-
-      <Box sx={{ my: 3 }}>
-        <OtherList />
+        <ProductList title="Sản phẩm mới" productList={productList} />
       </Box>
     </Box>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage

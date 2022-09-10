@@ -5,30 +5,30 @@ import {
   responsiveFontSizes,
   Stack,
   ThemeProvider,
-} from "@mui/material";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import Footer from "../Common/Footer";
-import Header from "../Common/Header";
-import SideBar from "../Common/SideBar";
+} from '@mui/material'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+import Footer from '../Common/Footer'
+import Header from '../Common/Header'
+import SideBar from '../Common/SideBar'
 
 MainLayout.propTypes = {
   children: PropTypes.node,
-};
+}
 
 function MainLayout({ children }) {
-  const [mode, setMode] = useState("light");
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mode, setMode] = useState('light')
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   let theme = createTheme({
     palette: {
       mode: mode,
-      // primary: {
-      //   light: "#ff867c",
-      //   main: "#ef5350",
-      //   dark: "#b61827",
-      //   contrastText: "#ffffff",
-      // },
+      primary: {
+        light: '#ff867c',
+        main: '#ef5350',
+        dark: '#b61827',
+        contrastText: '#ffffff',
+      },
       // primary: {
       //   light: "#BB86FC",
       //   main: "#6200EE",
@@ -42,16 +42,16 @@ function MainLayout({ children }) {
       //   contrastText: "#ffffff",
       // },
     },
-  });
+  })
 
-  theme = responsiveFontSizes(theme);
+  theme = responsiveFontSizes(theme)
 
   function handleChangeMode() {
-    setMode(mode === "light" ? "dark" : "light");
+    setMode(mode === 'light' ? 'dark' : 'light')
   }
 
   function handleDrawerToggle() {
-    setMobileOpen((x) => !x);
+    setMobileOpen((x) => !x)
   }
 
   return (
@@ -59,12 +59,13 @@ function MainLayout({ children }) {
       <CssBaseline />
       <Stack
         sx={{
-          minHeight: "100vh",
+          minHeight: '100vh',
         }}
       >
         <Header
-          onChangeMode={handleChangeMode}
           mode={mode}
+          mobileOpen={mobileOpen}
+          onChangeMode={handleChangeMode}
           onDrawerToggle={handleDrawerToggle}
         />
         <SideBar onClose={() => setMobileOpen(false)} mobileOpen={mobileOpen} />
@@ -73,7 +74,7 @@ function MainLayout({ children }) {
         <Footer />
       </Stack>
     </ThemeProvider>
-  );
+  )
 }
 
-export default MainLayout;
+export default MainLayout

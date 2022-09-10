@@ -92,7 +92,7 @@ function ArrowPrev({ onClick }) {
 }
 
 const settings = {
-  // dots: true,
+  dots: true,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
@@ -104,80 +104,70 @@ const settings = {
 
 function Banner(props) {
   return (
-    <Box>
-      <Container>
-        <Box
-          boxShadow={3}
-          sx={{
-            position: "relative",
-            width: "100%",
-            borderRadius: 4,
-            backgroundColor: (theme) => alpha(theme.palette.common.white, 0.1),
-            backdropFilter: "20px",
+    <Box
+      sx={{
+        position: "relative",
+        width: "100%",
+        borderRadius: 4,
+        backgroundColor: (theme) => alpha(theme.palette.common.white, 0.1),
+        backdropFilter: "20px",
 
-            "&:hover": {
-              ".prev": {
-                display: { xs: "none", md: "flex" },
-              },
-              ".next": {
-                display: { xs: "none", md: "flex" },
-              },
-            },
-          }}
-        >
-          <Slider {...settings}>
-            {bannerList.map((item, idx) => (
-              <Box key={idx}>
+        "&:hover": {
+          ".prev": {
+            display: { xs: "none", md: "flex" },
+          },
+          ".next": {
+            display: { xs: "none", md: "flex" },
+          },
+        },
+      }}
+    >
+      <Slider {...settings}>
+        {bannerList.map((item, idx) => (
+          <Box key={idx}>
+            <Container>
+              <Stack direction="row" flexWrap="wrap">
                 <Stack
-                  direction="row"
-                  flexWrap="wrap"
-                  sx={{
-                    px: { xs: 4, md: 8.5 },
-                    pt: { xs: 4, md: 0 },
-                  }}
+                  justifyContent="center"
+                  sx={{ width: { xs: "100%", sm: 1 / 2 } }}
+                  spacing={3}
                 >
-                  <Stack
-                    justifyContent="center"
-                    sx={{ width: { xs: "100%", md: 1 / 2 } }}
-                    spacing={3}
+                  <Typography variant="h2" fontWeight="bold">
+                    {item.title}
+                  </Typography>
+
+                  <Typography variant="body1">{item.description}</Typography>
+
+                  <Box
+                    sx={{
+                      "& a": {
+                        color: "inherit",
+                        textDecoration: "none",
+                      },
+                    }}
                   >
-                    <Typography variant="h2" fontWeight="bold">
-                      {item.title}
-                    </Typography>
-
-                    <Typography variant="body1">{item.description}</Typography>
-
-                    <Box
-                      sx={{
-                        "& a": {
-                          color: "inherit",
-                          textDecoration: "none",
-                        },
-                      }}
-                    >
-                      <Link to={item.link}>
-                        <Button variant="outlined" color="inherit">
-                          Explore
-                        </Button>
-                      </Link>
-                    </Box>
-                  </Stack>
-
-                  <Box sx={{ width: { xs: "100%", md: 1 / 2 } }}>
-                    <Box
-                      component="img"
-                      src={item.thumbnailUrl}
-                      alt={`banner`}
-                      width="100%"
-                      height="100%"
-                    />
+                    <Link to={item.link}>
+                      <Button variant="outlined" color="inherit">
+                        Explore
+                      </Button>
+                    </Link>
                   </Box>
                 </Stack>
-              </Box>
-            ))}
-          </Slider>
-        </Box>
-      </Container>
+
+                <Box sx={{ width: { xs: "100%", md: 1 / 2 } }}>
+                  <Box
+                    component="img"
+                    src={item.thumbnailUrl}
+                    alt={`banner`}
+                    width="100%"
+                    height="100%"
+                  />
+                </Box>
+              </Stack>
+            </Container>
+          </Box>
+        ))}
+      </Slider>
     </Box>
   );
 }

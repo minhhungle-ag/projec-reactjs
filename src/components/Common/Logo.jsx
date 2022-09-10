@@ -1,36 +1,33 @@
-import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
-import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
-import { Link } from "react-router-dom";
+import DevicesOutlinedIcon from '@mui/icons-material/DevicesOutlined'
+import { Stack, Typography } from '@mui/material'
+import React from 'react'
 
 function Logo(props) {
   return (
-    <Stack direction="row" alignItems="center" spacing={2.5}>
+    <Stack direction="row" alignItems="center">
+      <Typography
+        variant="h2"
+        noWrap
+        sx={{
+          fontFamily: 'Dancing Script',
+
+          fontWeight: 900,
+          letterSpacing: '.3rem',
+          color: 'primary.main',
+          textDecoration: 'none',
+        }}
+      >
+        K
+      </Typography>
+
       <DevicesOutlinedIcon
         sx={{
-          fontSize: { xs: 32, sm: 48 },
-          color: "inherit",
+          mx: -1.3,
+          fontSize: { xs: 24, sm: 32 },
         }}
       />
-
-      <Link to="/trang-chu">
-        <Typography
-          variant="h5"
-          noWrap
-          sx={{
-            mr: { sm: 2 },
-            fontFamily: "monospace",
-            fontWeight: 700,
-            letterSpacing: ".3rem",
-            color: "inherit",
-            textDecoration: "none",
-          }}
-        >
-          Khải PC
-        </Typography>
-      </Link>
     </Stack>
-  );
+  )
 }
 
-export default Logo;
+export default Logo

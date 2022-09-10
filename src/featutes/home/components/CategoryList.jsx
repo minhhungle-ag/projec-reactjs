@@ -5,7 +5,7 @@ import { categoryList } from "../../../constants/common";
 
 function CategoryList(props) {
   return (
-    <Box sx={{ backdropFilter: "blur(20px)" }}>
+    <Box>
       <Container>
         <Typography
           variant="h3"

@@ -1,13 +1,14 @@
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { Stack } from "@mui/material";
+import { alpha, Divider, InputBase, Stack, styled } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import { red } from "@mui/material/colors";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
@@ -15,6 +16,7 @@ import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import * as React from "react";
 import { Link, NavLink } from "react-router-dom";
+import Logo from "./Logo";
 
 const pages = [
   { label: "Trang chủ", link: "trang-chu" },
@@ -26,12 +28,14 @@ const pages = [
 Header.propTypes = {
   onChangeMode: PropTypes.func,
   mode: PropTypes.string,
+  onDrawerToggle: PropTypes.func,
 };
 
-export function Header({ onChangeMode, mode }) {
+export function Header({ onChangeMode, mode, onDrawerToggle }) {
   return (
     <AppBar
       position="fixed"
+      color="inherit"
       sx={{
         "& a": {
           color: "inherit",
@@ -40,86 +44,74 @@ export function Header({ onChangeMode, mode }) {
       }}
     >
       <Container>
-        <Toolbar disableGutters>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "flex", md: "none" },
-            }}
-          >
-            <IconButton size="large" color="inherit">
-              <MenuIcon />
-            </IconButton>
-          </Box>
-
-          <DevicesOutlinedIcon sx={{ mr: 2.5, fontSize: { xs: 32, sm: 48 } }} />
-
-          <Link to="/trang-chu">
-            <Typography
-              variant="h6"
-              noWrap
+        <Box component="nav" sx={{ mx: { xs: -1, md: 0 }, my: 2 }}>
+          <Toolbar disableGutters>
+            <Box
               sx={{
-                mr: 2,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
+                flexGrow: 1,
+                display: { xs: "flex", md: "none" },
               }}
             >
-              <Box sx={{ display: { xs: "none", sm: "block" } }}>Khải PC</Box>
+              <IconButton
+                size="large"
+                color="inherit"
+                onClick={() => onDrawerToggle?.()}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Box>
 
-              <Box sx={{ display: { sm: "none" } }}>ATP</Box>
-            </Typography>
-          </Link>
+            <Logo />
 
-          <Box sx={{ flexGrow: { xs: 0, md: 1 } }} />
+            <Box sx={{ flexGrow: 1 }} />
 
-          <Stack
-            direction="row"
-            spacing={1}
-            sx={{
-              display: {
-                xs: "none",
-                md: "flex",
+            <Stack
+              direction="row"
+              alignItems="center"
+              spacing={1}
+              sx={{
+                display: {
+                  xs: "none",
+                  md: "flex",
+                },
+
+                flexGrow: 1,
 
                 ".active": {
                   color: "primary.main",
                 },
-              },
-            }}
-          >
-            {pages.map((page, idx) => (
-              <NavLink
-                to={page.link}
-                key={idx}
-                className={({ isActive }) => (isActive ? "active" : "")}
-              >
-                <Button key={page} color="inherit">
-                  {page.label}
-                </Button>
-              </NavLink>
-            ))}
-          </Stack>
+              }}
+            >
+              {pages.map((page, idx) => (
+                <NavLink
+                  to={page.link}
+                  key={idx}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <Button
+                    key={page}
+                    color="inherit"
+                    sx={{ textTransform: "none", fontWeight: "bold" }}
+                  >
+                    {page.label}
+                  </Button>
+                </NavLink>
+              ))}
+            </Stack>
 
-          <Box sx={{ flexGrow: 1 }} />
+            <IconButton size="large" color="inherit">
+              <SearchIcon fontSize="medium" />
+            </IconButton>
 
-          <IconButton size="large" color="inherit">
-            <SearchIcon fontSize="medium" />
-          </IconButton>
+            <IconButton size="large" color="inherit">
+              <ShoppingCartOutlinedIcon fontSize="medium" />
+            </IconButton>
 
-          <IconButton size="large" color="inherit">
-            <ShoppingCartOutlinedIcon fontSize="medium" />
-          </IconButton>
-
-          <IconButton
-            sx={{ ml: 1 }}
-            onClick={() => onChangeMode?.()}
-            color="inherit"
-          >
-            {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
-          </IconButton>
-        </Toolbar>
+            <IconButton onClick={() => onChangeMode?.()} color="inherit">
+              {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
+            </IconButton>
+          </Toolbar>
+        </Box>
       </Container>
     </AppBar>
   );

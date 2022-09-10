@@ -1,5 +1,6 @@
 import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
 import { Box, Container, Stack, Typography } from "@mui/material";
+import { red } from "@mui/material/colors";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -7,6 +8,7 @@ import {
   footerPageList,
   socialList,
 } from "../../constants/common";
+import Logo from "./Logo";
 
 function Footer(props) {
   return (
@@ -30,29 +32,7 @@ function Footer(props) {
           justifyContent="space-between"
         >
           <Box sx={{ py: 3, width: { xs: "100%", sm: 1 / 2, lg: 1 / 3 } }}>
-            <Stack direction="row" alignItems="center">
-              <DevicesOutlinedIcon
-                sx={{ mr: 2.5, fontSize: { xs: 32, sm: 48 } }}
-              />
-
-              <Link to="/trang-chu">
-                <Typography
-                  variant="h6"
-                  noWrap
-                  sx={{
-                    mr: 2,
-                    fontFamily: "monospace",
-                    fontWeight: 700,
-                    letterSpacing: ".3rem",
-                    color: "inherit",
-                    textDecoration: "none",
-                  }}
-                >
-                  Khải PC
-                </Typography>
-              </Link>
-            </Stack>
-
+            <Logo />
             <Typography variant="body1" width="70%">
               Chuyên cung cấp các sản phẩm dịch và dịch vụ tin học
             </Typography>

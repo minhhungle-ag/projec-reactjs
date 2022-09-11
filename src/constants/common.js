@@ -9,12 +9,12 @@ export const categoryList = [
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_desktops_062022.jpg',
-    title: 'Máy tính bàn',
+    title: 'Máy bàn',
   },
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_11_2021APPLE500.jpg',
-    title: 'Sản phẩm Apple',
+    title: 'Apple',
   },
   {
     thumbnailUrl:
@@ -27,7 +27,7 @@ export const accessoryList = [
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_videoCards500.jpg',
-    title: 'Card màng hình',
+    title: 'VGA',
   },
   {
     thumbnailUrl:
@@ -52,7 +52,7 @@ export const accessoryList = [
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_PowerSupplies500_062022.jpg',
-    title: 'Nguồn máy tính',
+    title: 'Nguồn',
   },
   {
     thumbnailUrl:

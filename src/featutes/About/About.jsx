@@ -23,7 +23,7 @@ function About(props) {
         <Box
           component="img"
           width="100%"
-          maxHeight="450px"
+          maxHeight="350px"
           src="https://assets.website-files.com/61d6d915d860cc3d5935aeef/61e179351c3b200659e6960f_About%20Us%20Image%202-min%20(1).jpg"
           alt="about"
         />

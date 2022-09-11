@@ -10,7 +10,6 @@ import Products from './featutes/products/pages/Products'
 function App() {
   return (
     <MainLayout>
-      <Toolbar />
       <Routes>
         <Route path="/" element={<Navigate to="trang-chu" />} />
         <Route path="trang-chu" element={<HomePage />} />

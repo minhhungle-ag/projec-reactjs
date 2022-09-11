@@ -6,6 +6,7 @@ import { Box, Container, Stack, Typography } from '@mui/material'
 import { productList } from '../../../api/data_face'
 import TabList from '../components/TabList'
 import { menuList } from '../../../constants/menuList'
+import ThumbnailBanner from '../../../components/Common/ThumbnailBanner'
 
 Products.propTypes = {}
 
@@ -28,6 +29,16 @@ function Products(props) {
   }, [categoryId])
   return (
     <Box>
+      <Box>
+        <Box
+          component="img"
+          width="100%"
+          maxHeight="350px"
+          src="https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_BrandPromos_AMD_Configurator_11_2021AMDBuilderHeader.jpg"
+          alt="about"
+        />
+      </Box>
+
       <Container>
         <Box>
           <Box sx={{ my: 2 }}>

@@ -1,8 +1,8 @@
-import { Box, Container, Stack } from "@mui/material";
-import React from "react";
-import { computerList } from "../../../constants/common";
+import { Box, Container, Stack } from '@mui/material'
+import React from 'react'
+import { computerList } from '../../../constants/common'
 
-ComputerCompany.propTypes = {};
+ComputerCompany.propTypes = {}
 
 function ComputerCompany(props) {
   return (
@@ -12,18 +12,26 @@ function ComputerCompany(props) {
         alignItems="center"
         justifyContent="space-between"
         flexWrap="wrap"
-        sx={{ py: 3, mx: -2 }}
+        sx={{ mx: -2 }}
       >
-        {computerList.map((item, idx) => (
-          <Box sx={{ width: 1 / 4, p: 2 }} key={idx}>
-            <Box boxShadow={1} sx={{ bgcolor: "white" }}>
-              <Box sx={{ width: "100%" }} component="img" src={item} />
+        {Array.isArray(computerList) &&
+          computerList.length > 0 &&
+          computerList.map((item, idx) => (
+            <Box
+              sx={{
+                width: { xs: 1 / (computerList.length / 2), md: 1 / computerList.length },
+                p: 2,
+              }}
+              key={idx}
+            >
+              <Box boxShadow={1} sx={{ bgcolor: 'white' }}>
+                <Box sx={{ width: '100%' }} component="img" src={item} />
+              </Box>
             </Box>
-          </Box>
-        ))}
+          ))}
       </Stack>
     </Container>
-  );
+  )
 }
 
-export default ComputerCompany;
+export default ComputerCompany

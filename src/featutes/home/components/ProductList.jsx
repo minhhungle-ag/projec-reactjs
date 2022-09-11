@@ -13,7 +13,7 @@ function ProductList({ title, productList }) {
   return (
     <Box>
       <Container>
-        <Typography variant="h3" fontWeight={700} sx={{ mb: 1, textAlign: 'center' }}>
+        <Typography variant="h5" fontWeight={700} sx={{ mb: 1 }}>
           {title}
         </Typography>
 
@@ -21,7 +21,7 @@ function ProductList({ title, productList }) {
           {Array.isArray(productList) &&
             productList.length > 0 &&
             productList.map((item, idx) => (
-              <Box sx={{ width: { xs: '100%', sm: 1 / 2, md: 1 / 4 } }} key={idx}>
+              <Box sx={{ width: { xs: 1 / 2, sm: 1 / 3, md: 1 / 5 } }} key={idx}>
                 <Box sx={{ p: 1 }}>
                   <ProductCard product={item} />
                 </Box>

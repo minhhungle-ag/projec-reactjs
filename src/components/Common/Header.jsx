@@ -5,7 +5,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7'
 import MenuIcon from '@mui/icons-material/Menu'
 import SearchIcon from '@mui/icons-material/Search'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
-import { Stack } from '@mui/material'
+import { Divider, Stack, Typography } from '@mui/material'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
@@ -28,7 +28,7 @@ Header.propTypes = {
 export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
   return (
     <AppBar
-      position="fixed"
+      position="sticky"
       color="inherit"
       sx={{
         '& a': {
@@ -48,7 +48,6 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
           <Stack
             direction="row"
             alignItems="center"
-            spacing={1}
             sx={{
               display: {
                 xs: 'none',
@@ -57,9 +56,9 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
 
               flexGrow: 1,
 
-              '.active': {
-                color: 'primary.main',
-              },
+              // '.active': {
+              //   color: 'primary.main',
+              // },
             }}
           >
             {pageList.map((item, idx) => (

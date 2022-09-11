@@ -1,6 +1,8 @@
-import { Box } from '@mui/material'
-import Banner from '../../../components/Common/Banner'
-import { accessoryList, categoryList, productList } from '../../../constants/common'
+import { Box, Divider } from '@mui/material'
+import { Container } from '@mui/system'
+import { productList } from '../../../api/data_face'
+import ThumbnailBanner from '../../../components/Common/ThumbnailBanner'
+import { accessoryList, categoryList } from '../../../constants/common'
 import CategoryList from '../components/CategoryList'
 import ComputerCompany from '../components/ComputerCompany'
 import ProductList from '../components/ProductList'
@@ -8,8 +10,8 @@ import ProductList from '../components/ProductList'
 function HomePage(props) {
   return (
     <Box>
-      <Box sx={{ my: 3 }}>
-        <Banner />
+      <Box sx={{ mb: 3, borderRadius: 1 }}>
+        <ThumbnailBanner />
       </Box>
 
       <Box sx={{ my: 3 }}>
@@ -17,15 +19,21 @@ function HomePage(props) {
       </Box>
 
       <Box sx={{ my: 3 }}>
-        <CategoryList title="Danh mục sản phẩm" categoryList={categoryList} />
+        <CategoryList
+          // title="Danh muc sản phẩm"
+          categoryList={[...categoryList, ...accessoryList]}
+        />
       </Box>
 
-      <Box sx={{ my: 3 }}>
-        <CategoryList title="Danh mục phụ kiện" categoryList={accessoryList} />
-      </Box>
+      <Container>
+        <Divider />
+      </Container>
 
       <Box sx={{ my: 3 }}>
-        <ProductList title="Sản phẩm mới" productList={productList} />
+        <ProductList
+          title="Sản phẩm mới nhất"
+          productList={productList.filter((item, idx) => idx < 10)}
+        />
       </Box>
     </Box>
   )

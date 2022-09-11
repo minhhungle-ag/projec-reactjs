@@ -11,7 +11,7 @@ function CategoryList({ title, categoryList }) {
   return (
     <Box>
       <Container>
-        <Typography variant="h3" fontWeight={700} sx={{ mb: 1, textAlign: 'center' }}>
+        <Typography variant="h5" fontWeight={700} sx={{ mb: 1 }}>
           {title}
         </Typography>
 
@@ -21,7 +21,7 @@ function CategoryList({ title, categoryList }) {
             categoryList.map((item, idx) => (
               <Box
                 sx={{
-                  width: { xs: '100%', sm: 1 / 2, md: 1 / 4 },
+                  width: { xs: 1 / 2, sm: 1 / 4, md: 1 / 6 },
                   p: 2,
                   cursor: 'pointer',
                 }}

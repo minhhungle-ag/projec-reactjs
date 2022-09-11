@@ -1,53 +1,45 @@
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import {
-  alpha,
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Stack,
-  Typography,
-} from "@mui/material";
-import React from "react";
-import { Link } from "react-router-dom";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import { alpha, Box, Button, Container, IconButton, Stack, Typography } from '@mui/material'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css'
 
 const bannerList = [
   {
-    title: "The new phones are here take a look.",
+    title: 'The new phones are here take a look.',
     description: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Scelerisque in est dui, aliquam, tempor. Faucibus morbi
     turpis.`,
-    link: "",
+    link: '',
     thumbnailUrl:
-      "https://assets.website-files.com/61d6d915d860cc3d5935aeef/62337475ffd581b880e01bd8_First%20Slide%20Image%20(2).png",
+      'https://assets.website-files.com/61d6d915d860cc3d5935aeef/62337475ffd581b880e01bd8_First%20Slide%20Image%20(2).png',
   },
 
   {
-    title: "The iPad just got a new purpose!",
+    title: 'The iPad just got a new purpose!',
     description: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Scelerisque in est dui, aliquam, tempor. Faucibus morbi
     turpis.`,
-    link: "",
+    link: '',
     thumbnailUrl:
-      "https://assets.website-files.com/61d6d915d860cc3d5935aeef/6233747209556434ae5957c3_Second%20Slide%20(2)%20(1).png",
+      'https://assets.website-files.com/61d6d915d860cc3d5935aeef/6233747209556434ae5957c3_Second%20Slide%20(2)%20(1).png',
   },
 
   {
-    title: "Your Pro setup just got better.",
+    title: 'Your Pro setup just got better.',
     description: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Scelerisque in est dui, aliquam, tempor. Faucibus morbi
     turpis.`,
-    link: "",
+    link: '',
     thumbnailUrl:
-      "https://assets.website-files.com/61d6d915d860cc3d5935aeef/62337473ecc98aeb5c540994_Third%20Slide%20(2)%20(1).png",
+      'https://assets.website-files.com/61d6d915d860cc3d5935aeef/62337473ecc98aeb5c540994_Third%20Slide%20(2)%20(1).png',
   },
-];
+]
 
-Banner.propTypes = {};
+Banner.propTypes = {}
 
 function ArrowNext({ onClick }) {
   return (
@@ -57,17 +49,17 @@ function ArrowNext({ onClick }) {
       className="next"
       onClick={onClick}
       sx={{
-        position: "absolute",
-        top: "calc(50% - 24px)",
+        position: 'absolute',
+        top: 'calc(50% - 24px)',
         right: 5,
         zIndex: 1,
 
-        display: "none",
+        display: 'none',
       }}
     >
       <ArrowForwardIcon fontSize="large" />
     </IconButton>
-  );
+  )
 }
 
 function ArrowPrev({ onClick }) {
@@ -78,17 +70,17 @@ function ArrowPrev({ onClick }) {
       onClick={onClick}
       className="prev"
       sx={{
-        position: "absolute",
-        top: "calc(50% - 24px)",
+        position: 'absolute',
+        top: 'calc(50% - 24px)',
         left: 5,
         zIndex: 1,
 
-        display: "none",
+        display: 'none',
       }}
     >
       <ArrowBackIcon fontSize="large" />
     </IconButton>
-  );
+  )
 }
 
 const settings = {
@@ -100,24 +92,24 @@ const settings = {
   autoplay: true,
   nextArrow: <ArrowNext />,
   prevArrow: <ArrowPrev />,
-};
+}
 
 function Banner(props) {
   return (
     <Box
       sx={{
-        position: "relative",
-        width: "100%",
-        borderRadius: 4,
-        backgroundColor: (theme) => alpha(theme.palette.common.white, 0.1),
-        backdropFilter: "20px",
+        position: 'relative',
+        width: '100%',
 
-        "&:hover": {
-          ".prev": {
-            display: { xs: "none", md: "flex" },
+        backgroundColor: (theme) => alpha(theme.palette.common.black, 0.2),
+        backdropFilter: '20px',
+
+        '&:hover': {
+          '.prev': {
+            display: { xs: 'none', md: 'flex' },
           },
-          ".next": {
-            display: { xs: "none", md: "flex" },
+          '.next': {
+            display: { xs: 'none', md: 'flex' },
           },
         },
       }}
@@ -129,7 +121,7 @@ function Banner(props) {
               <Stack direction="row" flexWrap="wrap">
                 <Stack
                   justifyContent="center"
-                  sx={{ width: { xs: "100%", sm: 1 / 2 } }}
+                  sx={{ width: { xs: '100%', sm: 1 / 2 } }}
                   spacing={3}
                 >
                   <Typography variant="h2" fontWeight="bold">
@@ -140,9 +132,9 @@ function Banner(props) {
 
                   <Box
                     sx={{
-                      "& a": {
-                        color: "inherit",
-                        textDecoration: "none",
+                      '& a': {
+                        color: 'inherit',
+                        textDecoration: 'none',
                       },
                     }}
                   >
@@ -154,7 +146,7 @@ function Banner(props) {
                   </Box>
                 </Stack>
 
-                <Box sx={{ width: { xs: "100%", md: 1 / 2 } }}>
+                <Box sx={{ width: { xs: '100%', md: 1 / 2 } }}>
                   <Box
                     component="img"
                     src={item.thumbnailUrl}
@@ -169,7 +161,7 @@ function Banner(props) {
         ))}
       </Slider>
     </Box>
-  );
+  )
 }
 
-export default Banner;
+export default Banner

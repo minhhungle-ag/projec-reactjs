@@ -1,5 +1,5 @@
 import DevicesOutlinedIcon from '@mui/icons-material/DevicesOutlined'
-import { Box, Stack, Typography } from '@mui/material'
+import { Stack, Typography } from '@mui/material'
 import React from 'react'
 
 function Logo(props) {

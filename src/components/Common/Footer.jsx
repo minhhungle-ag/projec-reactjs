@@ -1,17 +1,49 @@
-import { alpha, Box, Container, Divider, Stack, Typography } from '@mui/material'
+import { Box, Container, Divider, Stack, Typography } from '@mui/material'
 import React from 'react'
-import { categoryMenu, footerPageList, socialList } from '../../constants/common'
+import { categoryMenu, footerPageList } from '../../constants/common'
 import Logo from './Logo'
+import CallIcon from '@mui/icons-material/Call'
+import EmailIcon from '@mui/icons-material/Email'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import HomeIcon from '@mui/icons-material/Home'
+import InstagramIcon from '@mui/icons-material/Instagram'
+
+const infoList = [
+  {
+    desc: 'Chuyên cung cấp máy tính bàn, laptop, các sản phẩm dịch vụ tin học.',
+    icon: null,
+  },
+  {
+    desc: '0929414138 - 0903155357',
+    icon: <CallIcon />,
+  },
+  {
+    desc: '13 Thích Bửu Đăng, p.1, quận Gò Vấp, HCM',
+    icon: <HomeIcon />,
+  },
+]
+
+const socialListIcon = [
+  {
+    link: 'mailto:haless132@gmail.com',
+    icon: <EmailIcon />,
+  },
+  {
+    link: 'https://www.facebook.com/KH%E1%BA%A2I-PC-103287405865184',
+    icon: <FacebookIcon />,
+  },
+  {
+    link: '',
+    icon: <InstagramIcon />,
+  },
+]
 
 function Footer(props) {
   return (
     <Box
+      component="footer"
+      color="inherit"
       sx={{
-        borderTop: '1px solid ',
-        borderColor: 'divider',
-        backgroundColor: (theme) => alpha(theme.palette.common.black, 0.7),
-        color: 'white',
-
         '& a': {
           color: 'inherit',
           textDecoration: 'none',
@@ -19,20 +51,30 @@ function Footer(props) {
       }}
     >
       <Container>
+        <Divider color="white" />
+
         <Stack
           direction="row"
           flexWrap="wrap"
           alignItems="flex-start"
           justifyContent="space-between"
+          sx={{ py: { xs: 2, md: 6 } }}
         >
-          <Box sx={{ py: 3, width: { xs: '100%', sm: 1 / 2, lg: 1 / 3 } }}>
+          <Stack
+            spacing={0.5}
+            sx={{ py: 2, width: { xs: '100%', sm: 1 / 2, md: 'auto' }, flexGrow: 1 }}
+          >
             <Logo />
-            <Typography variant="body2" width="70%">
-              Chuyên cung cấp các sản phẩm dịch và dịch vụ tin học
-            </Typography>
-          </Box>
 
-          <Box sx={{ py: 3, width: { xs: '100%', sm: 1 / 2, lg: 1 / 5 } }}>
+            {infoList.map((item, idx) => (
+              <Stack direction="row" alignItems="center" spacing={1} key={idx}>
+                {item.icon}
+                <Typography variant="body2">{item.desc}</Typography>
+              </Stack>
+            ))}
+          </Stack>
+
+          <Box sx={{ py: 2, width: { xs: '100%', sm: 1 / 2, md: 'auto' }, flexGrow: 1 }}>
             <Stack spacing={2}>
               <Typography variant="h5" fontWeight="bold">
                 Tất cả sản phẩm
@@ -49,7 +91,7 @@ function Footer(props) {
             </Stack>
           </Box>
 
-          <Box sx={{ py: 3, width: { xs: '100%', sm: 1 / 2, lg: 1 / 5 } }}>
+          <Box sx={{ py: 2, width: { xs: '100%', sm: 1 / 2, md: 'auto' }, flexGrow: 1 }}>
             <Stack spacing={2}>
               <Typography variant="h5" fontWeight="bold">
                 Về chúng tôi
@@ -66,19 +108,24 @@ function Footer(props) {
             </Stack>
           </Box>
 
-          <Box sx={{ py: 3, width: { xs: '100%', sm: 1 / 2, lg: 1 / 5 } }}>
+          <Box sx={{ py: 2, width: { xs: '100%', sm: 1 / 2, md: 'auto' } }}>
             <Stack spacing={2}>
               <Typography variant="h5" fontWeight="bold">
-                Theo dõi chúng tôi
+                Mạng xã hội
               </Typography>
 
-              <Stack spacing={1}>
-                {Array.isArray(socialList) &&
-                  socialList.map((item, idx) => (
-                    <Typography variant="body2" key={idx}>
-                      {item.label}
-                    </Typography>
-                  ))}
+              <Stack direction="row" alignItem="center" spacing={1}>
+                {socialListIcon.map((item, idx) => (
+                  <Stack
+                    direction="row"
+                    alignItems="center"
+                    justifyContent="center"
+                    component="a"
+                    href={item.link}
+                  >
+                    {item.icon}
+                  </Stack>
+                ))}
               </Stack>
             </Stack>
           </Box>
@@ -88,7 +135,7 @@ function Footer(props) {
 
         <Stack justifyContent="center" alignItems="center" sx={{ p: 2 }}>
           <Typography variant="body2" textAlign="center">
-            © {new Date().getFullYear()} KComputer. Power by Minh Hung Le.
+            © {new Date().getFullYear()} kcomputer.com. Power by Minh Hung Le.
           </Typography>
         </Stack>
       </Container>

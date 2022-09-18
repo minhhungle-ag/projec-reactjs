@@ -25,7 +25,7 @@ function SideBar({ mobileOpen, onClose }) {
           textDecoration: 'none',
           color: 'inherit',
         },
-        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '70%' },
+        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: { xs: 240, sm: '70%' } },
       }}
     >
       <Stack direction="row" justifyContent="center" sx={{ p: 1 }}>

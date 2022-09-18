@@ -5,12 +5,13 @@ import {
   responsiveFontSizes,
   Stack,
   ThemeProvider,
+  Toolbar,
 } from '@mui/material'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import BottomMenu from '../Common/BottomMenu'
 import Footer from '../Common/Footer'
 import Header from '../Common/Header'
-import SideBar from '../Common/SideBar'
 
 MainLayout.propTypes = {
   children: PropTypes.node,
@@ -29,12 +30,12 @@ function MainLayout({ children, ...props }) {
       //   dark: '#b61827',
       //   contrastText: '#ffffff',
       // },
-      primary: {
-        light: '#BB86FC',
-        main: '#6200EE',
-        dark: '#3700B3',
-        contrastText: '#ffffff',
-      },
+      // primary: {
+      //   light: '#BB86FC',
+      //   main: '#6200EE',
+      //   dark: '#3700B3',
+      //   contrastText: '#ffffff',
+      // },
       // primary: {
       //   light: '#fffb50',
       //   main: '#ffc800',
@@ -62,18 +63,25 @@ function MainLayout({ children, ...props }) {
           minHeight: '100vh',
         }}
       >
-        <Header
-          mode={mode}
-          mobileOpen={mobileOpen}
-          onChangeMode={handleChangeMode}
-          onDrawerToggle={handleDrawerToggle}
-        />
+        <Box>
+          <Header
+            mode={mode}
+            mobileOpen={mobileOpen}
+            onChangeMode={handleChangeMode}
+            onDrawerToggle={handleDrawerToggle}
+          />
 
-        <SideBar onClose={() => setMobileOpen(false)} mobileOpen={mobileOpen} />
+          {/* <SideBar onClose={() => setMobileOpen(false)} mobileOpen={mobileOpen} /> */}
 
-        <Box sx={{ flexGrow: 1 }}>{children}</Box>
+          <Box sx={{ flexGrow: 1 }}>{children}</Box>
 
-        <Footer />
+          <Footer />
+        </Box>
+
+        <Box sx={{ display: { md: 'none' } }}>
+          <Toolbar sx={{ my: 1 }} />
+          <BottomMenu />
+        </Box>
       </Stack>
     </ThemeProvider>
   )

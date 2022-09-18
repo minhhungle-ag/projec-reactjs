@@ -241,12 +241,15 @@ export const socialList = [
 ]
 
 export const computerList = [
-  'https://cdn.tgdd.vn/Brand/2/logo-asus-149x40.png',
-  'https://cdn.tgdd.vn/Brand/2/logo-hp-149x40-1.png',
-  'https://cdn.tgdd.vn/Brand/2/logo-lenovo-149x40.png',
-  'https://cdn.tgdd.vn/Brand/2/logo-acer-149x40.png',
-  'https://cdn.tgdd.vn/Brand/2/logo-dell-149x40.png',
-  'https://cdn.tgdd.vn/Brand/2/logo-msi-149x40.png',
-  'https://cdn.tgdd.vn/Brand/2/logo-macbook-149x40.png',
-  'https://cdn.tgdd.vn/Brand/2/logo-intel-149x40.png',
+  'https://templatecat-megabyte.netlify.app/img/brands/lenovo-logo.png',
+  'https://templatecat-megabyte.netlify.app/img/brands/logitech-logo.png',
+  'https://templatecat-megabyte.netlify.app/img/brands/msi-logo.png',
+  'https://templatecat-megabyte.netlify.app/img/brands/nvidia-logo.png',
+  'https://templatecat-megabyte.netlify.app/img/brands/samsung-logo.png',
+  'https://templatecat-megabyte.netlify.app/img/brands/amd-logo.png',
+  'https://templatecat-megabyte.netlify.app/img/brands/asus-logo.png',
+  'https://templatecat-megabyte.netlify.app/img/brands/gigabyte-logo.png',
+  'https://templatecat-megabyte.netlify.app/img/brands/hp-logo.png',
+  'https://templatecat-megabyte.netlify.app/img/brands/intel-logo.png',
+  // 'https://templatecat-megabyte.netlify.app/img/brands/kingston-logo.png',
 ]

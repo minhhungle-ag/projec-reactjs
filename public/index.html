@@ -5,10 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -32,10 +29,7 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,15 +44,14 @@
     <div id="root"></div>
 
     <!-- Messenger Plugin chat Code -->
-    <div id="fb-root"></div>
 
     <!-- Your Plugin chat code -->
     <div id="fb-customer-chat" class="fb-customerchat"></div>
 
     <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "103287405865184");
-      chatbox.setAttribute("attribution", "biz_inbox");
+      var chatbox = document.getElementById('fb-customer-chat')
+      chatbox.setAttribute('page_id', '103287405865184')
+      chatbox.setAttribute('attribution', 'biz_inbox')
     </script>
 
     <!-- Your SDK code -->
@@ -66,19 +59,18 @@
       window.fbAsyncInit = function () {
         FB.init({
           xfbml: true,
-          version: "v14.0",
-        });
-      };
-
-      (function (d, s, id) {
+          version: 'v14.0',
+        })
+      }
+      ;(function (d, s, id) {
         var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
+          fjs = d.getElementsByTagName(s)[0]
+        if (d.getElementById(id)) return
+        js = d.createElement(s)
+        js.id = id
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js'
+        fjs.parentNode.insertBefore(js, fjs)
+      })(document, 'script', 'facebook-jssdk')
     </script>
     <!--
       This HTML file is a template.
@@ -90,5 +82,14 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- FAN PAGE -->
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0"
+      nonce="mQ7L2wpa"
+    ></script>
   </body>
 </html>

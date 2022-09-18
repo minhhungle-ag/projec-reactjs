@@ -13,7 +13,7 @@ function ProductList({ title, productList }) {
   return (
     <Box>
       <Container>
-        <Typography variant="h5" fontWeight={700} sx={{ mb: 1 }}>
+        <Typography variant="h5" color="primary" textAlign="center" fontWeight={700} sx={{ mb: 1 }}>
           {title}
         </Typography>
 

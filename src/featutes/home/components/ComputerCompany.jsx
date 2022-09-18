@@ -12,20 +12,20 @@ function ComputerCompany(props) {
         alignItems="center"
         justifyContent="space-between"
         flexWrap="wrap"
-        sx={{ mx: -2 }}
+        sx={{ mx: -1 }}
       >
         {Array.isArray(computerList) &&
           computerList.length > 0 &&
           computerList.map((item, idx) => (
             <Box
               sx={{
-                width: { xs: 1 / (computerList.length / 2), md: 1 / computerList.length },
-                p: 2,
+                width: 1 / (computerList.length / 2),
+                p: 1,
               }}
               key={idx}
             >
-              <Box boxShadow={1} sx={{ bgcolor: 'white' }}>
-                <Box sx={{ width: '100%' }} component="img" src={item} />
+              <Box boxShadow={1} sx={{ bgcolor: 'white', borderRadius: '4px', px: 2 }}>
+                <Box sx={{ width: '100%', verticalAlign: 'middle' }} component="img" src={item} />
               </Box>
             </Box>
           ))}

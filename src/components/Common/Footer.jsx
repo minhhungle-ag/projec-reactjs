@@ -133,7 +133,7 @@ function Footer(props) {
 
         <Divider color="white" />
 
-        <Stack justifyContent="center" alignItems="center" sx={{ p: 2 }}>
+        <Stack justifyContent="center" alignItems="center" sx={{ py: 2 }}>
           <Typography variant="body2" textAlign="center">
             © {new Date().getFullYear()} kcomputer.com. Power by Minh Hung Le.
           </Typography>

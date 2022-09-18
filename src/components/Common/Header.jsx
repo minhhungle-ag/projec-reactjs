@@ -4,7 +4,16 @@ import Brightness7Icon from '@mui/icons-material/Brightness7'
 import CallIcon from '@mui/icons-material/Call'
 import SearchIcon from '@mui/icons-material/Search'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
-import { alpha, Divider, InputBase, Stack, styled, Typography } from '@mui/material'
+import {
+  alpha,
+  Divider,
+  InputBase,
+  Stack,
+  styled,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
@@ -27,6 +36,8 @@ const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   display: 'none',
   borderRadius: theme.shape.borderRadius,
+  border: '1px solid',
+  borderColor: alpha(theme.palette.common.black, 0.15),
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
@@ -69,12 +80,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }))
 
 export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
+  const theme = useTheme()
+  const md = useMediaQuery(theme.breakpoints.up('md'))
   return (
     <AppBar
-      position="static"
+      position={md ? 'sticky' : 'static'}
       color="inherit"
       sx={{
-        // color: (theme) => alpha(theme.palette.common.white, 0.7),
         '& a': {
           color: 'inherit',
           textDecoration: 'none',
@@ -83,15 +95,6 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
     >
       <Container>
         <Toolbar disableGutters>
-          {/* <IconButton
-            size="large"
-            color="inherit"
-            onClick={() => onDrawerToggle?.()}
-            sx={{ display: { xs: 'flex', md: 'none' }, mr: 2, p: 0 }}
-          >
-            {mobileOpen ? <Close /> : <MenuIcon />}
-          </IconButton> */}
-
           <Link to="/">
             <Logo />
           </Link>

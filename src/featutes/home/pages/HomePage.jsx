@@ -1,21 +1,22 @@
 import { Box } from '@mui/material'
-import { grey } from '@mui/material/colors'
 import { productList } from '../../../api/data_face'
-import Banner from '../../../components/Common/Banner'
+
 import { accessoryList, categoryList } from '../../../constants/common'
+import BannerList from '../components/BannerList'
 import CategoryList from '../components/CategoryList'
 import ComputerCompany from '../components/ComputerCompany'
 import ProductList from '../components/ProductList'
+import WhyUs from '../components/WhyUs'
 
 function HomePage(props) {
   return (
     <Box>
-      <Box sx={{ py: 1, pt: 2, bgcolor: grey[300] }}>
-        <Banner />
+      <Box sx={{ my: 2 }}>
+        <BannerList />
       </Box>
 
       <Box sx={{ my: 2 }}>
-        <ComputerCompany />
+        <WhyUs />
       </Box>
 
       <Box sx={{ my: 2 }}>
@@ -33,10 +34,7 @@ function HomePage(props) {
       </Box>
 
       <Box sx={{ my: 2 }}>
-        <ProductList
-          title="Sản phẩm bán chạy"
-          productList={productList.filter((item, idx) => idx < 10)}
-        />
+        <ComputerCompany />
       </Box>
     </Box>
   )

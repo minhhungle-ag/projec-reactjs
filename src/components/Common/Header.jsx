@@ -1,21 +1,12 @@
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
-
 import CallIcon from '@mui/icons-material/Call'
 import SearchIcon from '@mui/icons-material/Search'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
-import {
-  alpha,
-  Divider,
-  InputBase,
-  Stack,
-  styled,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material'
+import { alpha, InputBase, Stack, styled, Typography, useMediaQuery, useTheme } from '@mui/material'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
+import { grey } from '@mui/material/colors'
 import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
@@ -85,7 +76,6 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
   return (
     <AppBar
       position={md ? 'sticky' : 'static'}
-      color="inherit"
       sx={{
         '& a': {
           color: 'inherit',
@@ -103,7 +93,7 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
 
           <Search>
             <SearchIconWrapper>
-              <SearchIcon />
+              <SearchIcon color="primary" />
             </SearchIconWrapper>
             <StyledInputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }} />
           </Search>
@@ -134,25 +124,19 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
             {mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
         </Toolbar>
+      </Container>
 
-        <Divider
-          color="white"
-          sx={{
-            display: {
-              xs: 'none',
-              md: 'flex',
-            },
-          }}
-        />
-
-        <Box
-          sx={{
-            display: {
-              xs: 'none',
-              md: 'flex',
-            },
-          }}
-        >
+      <Box
+        sx={{
+          display: {
+            xs: 'none',
+            md: 'flex',
+          },
+          bgcolor: 'white',
+          color: 'black',
+        }}
+      >
+        <Container>
           <Stack
             direction="row"
             alignItems="center"
@@ -163,7 +147,8 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
               },
 
               '.active div': {
-                fontWeight: 900,
+                color: 'primary.main',
+                fontWeight: 'bold',
               },
             }}
           >
@@ -205,9 +190,30 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
                 </Box>
               </NavLink>
             ))}
+
+            <Box sx={{ flexGrow: 1 }} />
+
+            <NavLink
+              to="san-pham/pc-theo-yeu-cau"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              <Box
+                color="inherit"
+                sx={{
+                  borderBottom: '2px solid',
+                  borderColor: 'transparent',
+
+                  '&:hover': {
+                    color: 'primary.main',
+                  },
+                }}
+              >
+                NHẬN BUILD PC THEO YÊU CẦU
+              </Box>
+            </NavLink>
           </Stack>
-        </Box>
-      </Container>
+        </Container>
+      </Box>
     </AppBar>
   )
 }

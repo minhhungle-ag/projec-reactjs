@@ -1,4 +1,5 @@
-import { Box, Container } from '@mui/material'
+import { Box } from '@mui/material'
+import PropTypes from 'prop-types'
 import React from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
@@ -6,13 +7,9 @@ import 'slick-carousel/slick/slick.css'
 import ArrowNext from './ArrowNext'
 import ArrowPrev from './ArrowPrev'
 
-const bannerList = [
-  'https://templatecat-megabyte.netlify.app/img/banner/banner-1.jpg',
-  'https://templatecat-megabyte.netlify.app/img/banner/banner-2.jpg',
-  'https://templatecat-megabyte.netlify.app/img/banner/banner-3.jpg',
-]
-
-Banner.propTypes = {}
+Banner.propTypes = {
+  bannerList: PropTypes.array,
+}
 
 const settings = {
   infinite: true,
@@ -24,37 +21,39 @@ const settings = {
   prevArrow: <ArrowPrev />,
 }
 
-function Banner(props) {
+function Banner({ bannerList }) {
   return (
-    <Container>
-      <Box
-        sx={{
-          position: 'relative',
+    <Box
+      sx={{
+        position: 'relative',
+        height: { xs: 180, sm: 360 },
+        overflow: 'hidden',
+        borderRadius: '8px',
 
-          '&:hover': {
-            '.prev': {
-              display: { xs: 'none', md: 'flex' },
-            },
-            '.next': {
-              display: { xs: 'none', md: 'flex' },
-            },
+        '&:hover': {
+          '.prev': {
+            display: { xs: 'none', md: 'flex' },
           },
-        }}
-      >
-        <Slider {...settings}>
-          {bannerList.map((item, idx) => (
-            <Box key={idx}>
-              <Box
-                component="img"
-                src={item}
-                alt="banner"
-                sx={{ width: '100%', visibility: 'middle', maxHeight: 400 }}
-              />
-            </Box>
-          ))}
-        </Slider>
-      </Box>
-    </Container>
+          '.next': {
+            display: { xs: 'none', md: 'flex' },
+          },
+        },
+      }}
+    >
+      <Slider {...settings}>
+        {bannerList.map((item, idx) => (
+          <Box
+            key={idx}
+            sx={{
+              minHeight: { xs: 180, sm: 360 },
+              backgroundImage: `url(${item})`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
+        ))}
+      </Slider>
+    </Box>
   )
 }
 

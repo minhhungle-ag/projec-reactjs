@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
-import { useNavigate, useParams } from 'react-router-dom'
-import ProductList from '../components/ProductList'
 import { Box, Container, Stack, Typography } from '@mui/material'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { productList } from '../../../api/data_face'
-import TabList from '../components/TabList'
-import { menuList } from '../../../constants/menuList'
-import ThumbnailBanner from '../../../components/Common/ThumbnailBanner'
+import ProductList from '../components/ProductList'
 
 Products.propTypes = {}
 
 function Products(props) {
   const [products, setProducts] = useState([])
   const { categoryId } = useParams()
-  const navigate = useNavigate()
-  function handleTabClick(item) {
-    navigate(`/san-pham/${item.link}`)
-  }
 
   useEffect(() => {
     if (categoryId === 'tat-ca') {
@@ -29,32 +21,22 @@ function Products(props) {
   }, [categoryId])
   return (
     <Box>
-      <Box>
-        <Box
-          component="img"
-          width="100%"
-          maxHeight="350px"
-          src="https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_BrandPromos_AMD_Configurator_11_2021AMDBuilderHeader.jpg"
-          alt="about"
-        />
-      </Box>
-
       <Container>
-        <Box>
-          <Box sx={{ my: 2 }}>
-            <Typography variant="h4" fontWeight="bold">
-              Sản phẩm
-            </Typography>
+        <Box sx={{ my: 2 }}>
+          <Typography variant="h4" fontWeight="bold">
+            Sản phẩm
+          </Typography>
+        </Box>
+
+        <Stack direction="row" spacing={2} sx={{ my: 2 }}>
+          <Box boxShadow={1} sx={{ width: 1 / 4, height: '100%', my: 1, p: 2 }}>
+            Filter
           </Box>
 
-          <Box sx={{ my: 2 }}>
-            <TabList tabList={menuList} selectedKey={categoryId} onTabClick={handleTabClick} />
-          </Box>
-
-          <Box sx={{ my: 2 }}>
+          <Box sx={{ width: 3 / 4 }}>
             <ProductList productList={products} />
           </Box>
-        </Box>
+        </Stack>
       </Container>
     </Box>
   )

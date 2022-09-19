@@ -1,12 +1,13 @@
-import { Box, Container, Divider, Stack, Typography } from '@mui/material'
-import React from 'react'
-import { categoryMenu, footerPageList } from '../../constants/common'
-import Logo from './Logo'
 import CallIcon from '@mui/icons-material/Call'
 import EmailIcon from '@mui/icons-material/Email'
 import FacebookIcon from '@mui/icons-material/Facebook'
-import HomeIcon from '@mui/icons-material/Home'
 import InstagramIcon from '@mui/icons-material/Instagram'
+import StoreIcon from '@mui/icons-material/Store'
+import { alpha, Box, Container, Divider, Stack, Typography } from '@mui/material'
+import { grey } from '@mui/material/colors'
+import React from 'react'
+import { categoryMenu, footerPageList } from '../../constants/common'
+import Logo from './Logo'
 
 const infoList = [
   {
@@ -19,7 +20,7 @@ const infoList = [
   },
   {
     desc: '13 Thích Bửu Đăng, p.1, quận Gò Vấp, HCM',
-    icon: <HomeIcon />,
+    icon: <StoreIcon />,
   },
 ]
 
@@ -44,6 +45,9 @@ function Footer(props) {
       component="footer"
       color="inherit"
       sx={{
+        color: 'white',
+        bgcolor: 'primary.main',
+
         '& a': {
           color: 'inherit',
           textDecoration: 'none',
@@ -122,6 +126,7 @@ function Footer(props) {
                     justifyContent="center"
                     component="a"
                     href={item.link}
+                    key={idx}
                   >
                     {item.icon}
                   </Stack>

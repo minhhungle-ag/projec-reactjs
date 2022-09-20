@@ -4,7 +4,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'laptop',
+    category: 'laptops',
     price: 5000000,
     thumbnailUrl:
       'https://cdn.tgdd.vn/Products/Images/44/263977/TimerThumb/acer-travelmate-b3-tmb311-31-p49d-n5030-nxvnfsv005-(25).jpg',
@@ -22,7 +22,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -40,7 +40,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -58,7 +58,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -76,7 +76,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -94,7 +94,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -112,7 +112,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -130,7 +130,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'laptop',
+    category: 'laptops',
     price: 5000000,
     thumbnailUrl:
       'https://cdn.tgdd.vn/Products/Images/44/263977/TimerThumb/acer-travelmate-b3-tmb311-31-p49d-n5030-nxvnfsv005-(25).jpg',
@@ -148,7 +148,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'laptop',
+    category: 'laptops',
     price: 5000000,
     thumbnailUrl:
       'https://cdn.tgdd.vn/Products/Images/44/263977/TimerThumb/acer-travelmate-b3-tmb311-31-p49d-n5030-nxvnfsv005-(25).jpg',
@@ -166,7 +166,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'laptop',
+    category: 'laptops',
     price: 5000000,
     thumbnailUrl:
       'https://cdn.tgdd.vn/Products/Images/44/263977/TimerThumb/acer-travelmate-b3-tmb311-31-p49d-n5030-nxvnfsv005-(25).jpg',
@@ -184,7 +184,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -202,7 +202,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -220,7 +220,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'laptop',
+    category: 'laptops',
     price: 5000000,
     thumbnailUrl:
       'https://cdn.tgdd.vn/Products/Images/44/263977/TimerThumb/acer-travelmate-b3-tmb311-31-p49d-n5030-nxvnfsv005-(25).jpg',
@@ -238,7 +238,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'laptop',
+    category: 'laptops',
     price: 5000000,
     thumbnailUrl:
       'https://cdn.tgdd.vn/Products/Images/44/263977/TimerThumb/acer-travelmate-b3-tmb311-31-p49d-n5030-nxvnfsv005-(25).jpg',
@@ -256,7 +256,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'laptop',
+    category: 'laptops',
     price: 5000000,
     thumbnailUrl:
       'https://cdn.tgdd.vn/Products/Images/44/263977/TimerThumb/acer-travelmate-b3-tmb311-31-p49d-n5030-nxvnfsv005-(25).jpg',
@@ -274,7 +274,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -292,7 +292,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -310,7 +310,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -328,7 +328,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -346,7 +346,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -364,7 +364,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -382,7 +382,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -400,7 +400,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -418,7 +418,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -436,7 +436,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -454,7 +454,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -472,7 +472,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'mang-hinh',
+    category: 'monitors',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/650783_418129_01_front_thumbnail.jpg',
@@ -490,7 +490,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -508,7 +508,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -526,7 +526,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -544,7 +544,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -562,7 +562,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -580,7 +580,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -598,7 +598,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',
@@ -616,7 +616,7 @@ export const productList = [
   {
     id: uuid(),
     title: 'ACER CORE I5',
-    category: 'may-ban',
+    category: 'desktops',
     price: 5000000,
     thumbnailUrl:
       'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0649997_408831.jpg',

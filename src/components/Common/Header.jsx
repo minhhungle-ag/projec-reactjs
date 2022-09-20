@@ -6,7 +6,6 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import { alpha, InputBase, Stack, styled, Typography, useMediaQuery, useTheme } from '@mui/material'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
-import { grey } from '@mui/material/colors'
 import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
@@ -33,6 +32,7 @@ const Search = styled('div')(({ theme }) => ({
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
+
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
@@ -40,7 +40,7 @@ const Search = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     display: 'flex',
     marginLeft: theme.spacing(3),
-    width: 'auto',
+    width: '350px',
   },
 }))
 
@@ -63,7 +63,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     width: '100%',
 
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: 250,
     },
 
     transition: theme.transitions.create('width'),
@@ -84,7 +84,7 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
       }}
     >
       <Container>
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{ py: { md: 1.5 } }}>
           <Link to="/">
             <Logo />
           </Link>
@@ -93,24 +93,12 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
 
           <Search>
             <SearchIconWrapper>
-              <SearchIcon color="primary" />
+              <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }} />
           </Search>
 
           <Box sx={{ flexGrow: 1 }} />
-
-          <Stack direction="row" alignItems="center" spacing={0.5} sx={{ mr: 1 }}>
-            <CallIcon />{' '}
-            <Typography
-              variant="body1"
-              component="a"
-              href="tel:+0929414138"
-              sx={{ display: { xs: 'none', md: 'flex' } }}
-            >
-              0929414138 - 0903155357
-            </Typography>
-          </Stack>
 
           <IconButton size="large" color="inherit" sx={{ display: { md: 'none' } }}>
             <SearchIcon />
@@ -123,6 +111,20 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
           <IconButton onClick={() => onChangeMode?.()} color="inherit">
             {mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
+
+          <Stack
+            direction="row"
+            alignItems="center"
+            spacing={0.5}
+            sx={{ ml: 1 }}
+            component="a"
+            href="tel:+0929414138"
+          >
+            <CallIcon />{' '}
+            <Typography variant="body1" sx={{ display: { xs: 'none', md: 'flex' } }}>
+              0101-010101
+            </Typography>
+          </Stack>
         </Toolbar>
       </Container>
 
@@ -140,7 +142,7 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
           <Stack
             direction="row"
             alignItems="center"
-            spacing={2}
+            spacing={2.5}
             sx={{
               '& a': {
                 py: 1,
@@ -152,7 +154,7 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
               },
             }}
           >
-            <NavLink to="trang-chu" className={({ isActive }) => (isActive ? 'active' : '')}>
+            <NavLink to="home" className={({ isActive }) => (isActive ? 'active' : '')}>
               <Box
                 color="inherit"
                 sx={{
@@ -164,13 +166,13 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
                   },
                 }}
               >
-                Trang chủ
+                Home
               </Box>
             </NavLink>
 
             {menuList.map((item, idx) => (
               <NavLink
-                to={`san-pham/${item.link}`}
+                to={`products/${item.link}`}
                 key={idx}
                 className={({ isActive }) => (isActive ? 'active' : '')}
               >
@@ -191,12 +193,7 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
               </NavLink>
             ))}
 
-            <Box sx={{ flexGrow: 1 }} />
-
-            <NavLink
-              to="san-pham/pc-theo-yeu-cau"
-              className={({ isActive }) => (isActive ? 'active' : '')}
-            >
+            <NavLink to="About" className={({ isActive }) => (isActive ? 'active' : '')}>
               <Box
                 color="inherit"
                 sx={{
@@ -204,11 +201,27 @@ export function Header({ mobileOpen, mode, onDrawerToggle, onChangeMode }) {
                   borderColor: 'transparent',
 
                   '&:hover': {
-                    color: 'primary.main',
+                    borderColor: 'white',
                   },
                 }}
               >
-                NHẬN BUILD PC THEO YÊU CẦU
+                About
+              </Box>
+            </NavLink>
+
+            <NavLink to="contact" className={({ isActive }) => (isActive ? 'active' : '')}>
+              <Box
+                color="inherit"
+                sx={{
+                  borderBottom: '2px solid',
+                  borderColor: 'transparent',
+
+                  '&:hover': {
+                    borderColor: 'white',
+                  },
+                }}
+              >
+                Contact
               </Box>
             </NavLink>
           </Stack>

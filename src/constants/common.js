@@ -3,23 +3,23 @@ export const categoryList = [
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_laptops_062022.jpg',
-    title: 'Laptop',
+    title: 'Laptops',
   },
 
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_desktops_062022.jpg',
-    title: 'Máy bàn',
+    title: 'Desktop',
   },
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_11_2021APPLE500.jpg',
-    title: 'Apple',
+    title: 'Apple products',
   },
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_monitors_062022a.jpg',
-    title: 'Màng hình',
+    title: 'Monitors',
   },
 ]
 
@@ -47,22 +47,22 @@ export const accessoryList = [
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_memory_062022.jpg',
-    title: 'Ram',
+    title: 'Memory',
   },
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_PowerSupplies500_062022.jpg',
-    title: 'Nguồn',
+    title: 'Power',
   },
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_cooling_500.jpg',
-    title: 'Fan led',
+    title: 'Led fan',
   },
   {
     thumbnailUrl:
       'https://60a99bedadae98078522-a9b6cded92292ef3bace063619038eb1.ssl.cf2.rackcdn.com/images_CategoryImages_ComputerCases500_062022.jpg',
-    title: 'Case PC',
+    title: 'Case',
   },
 ]
 
@@ -207,22 +207,22 @@ export const productList = [
 
 export const categoryMenu = [
   {
-    label: 'Máy tính bàn',
+    label: 'Desktops',
   },
   {
-    label: 'Laptop',
+    label: 'Laptops',
   },
   {
-    label: 'Màng hình',
+    label: 'Monitors',
   },
   {
-    label: 'Linh kiện',
+    label: 'Something else',
   },
 ]
 
 export const footerPageList = [
-  { label: 'Giới thiệu', link: 'gioi-thieu' },
-  { label: 'Liên hệ', link: 'lien-he' },
+  { label: 'About', link: 'about' },
+  { label: 'Contact', link: 'contact' },
 ]
 
 export const socialList = [

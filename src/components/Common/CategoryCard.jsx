@@ -1,54 +1,50 @@
-import { Box, Card, Stack, Typography } from "@mui/material";
-import PropTypes from "prop-types";
-import React from "react";
+import { alpha, Box, Card, Stack, Typography } from '@mui/material'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 CategoryCard.propTypes = {
   category: PropTypes.object,
-};
+}
 
 function CategoryCard({ category }) {
   return (
     <Card
       sx={{
         borderRadius: 1,
+        height: 175,
 
-        "&:hover": {
+        backgroundImage: `url(${category.thumbnailUrl})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+
+        '&:hover': {
           boxShadow: (theme) => theme.shadows[10],
         },
       }}
     >
-      <Stack>
-        <Box
-          sx={{
-            position: "relative",
-            height: 0,
-            pt: "100%",
-          }}
-        >
-          <Box
-            component="img"
-            src={category.thumbnailUrl}
-            alt={category.title}
-            sx={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              width: "100%",
-              height: "100%",
-            }}
-          />
-        </Box>
+      <Stack
+        sx={{
+          height: '100%',
+          bgcolor: (theme) => alpha(theme.palette.common.black, 0.2),
+          '&:hover': {
+            backdropFilter: 'blur(5px)',
 
-        <Box sx={{ p: 2, pt: 0, flexGrow: 1, textAlign: "center" }}>
-          <Typography variant="h6" fontWeight={400}>
+            span: {
+              display: 'flex',
+            },
+          },
+        }}
+      >
+        <Box sx={{ flexGrow: 1 }}></Box>
+        <Box sx={{ p: 2, textAlign: 'center' }}>
+          <Typography variant="h6" component="span" fontWeight="bold" sx={{ display: 'none' }}>
             {category.title}
           </Typography>
         </Box>
       </Stack>
     </Card>
-  );
+  )
 }
 
-export default CategoryCard;
+export default CategoryCard

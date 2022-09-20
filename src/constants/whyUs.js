@@ -5,23 +5,23 @@ import PolicyIcon from '@mui/icons-material/Policy'
 
 export const whyUsList = [
   {
-    icon: <LocalShippingIcon fontSize="large" />,
+    icon: <LocalShippingIcon fontSize="large" color="primary" />,
     title: 'Free Shipping',
-    subtitle: 'Đơn hàng trên $100',
+    subtitle: 'Orders over $100',
   },
   {
-    icon: <PaidIcon fontSize="large" />,
-    title: 'Thanh toán',
-    subtitle: 'Dễ dàng, nhanh chóng',
+    icon: <PaidIcon fontSize="large" color="primary" />,
+    title: 'Money Back',
+    subtitle: 'With a 30 day',
   },
   {
-    icon: <HeadsetMicIcon fontSize="large" />,
-    title: 'Hỗ trợ',
-    subtitle: 'Hổ trợ khi 24/7',
+    icon: <HeadsetMicIcon fontSize="large" color="primary" />,
+    title: 'Online Support',
+    subtitle: 'Support 24/7',
   },
   {
-    icon: <PolicyIcon fontSize="large" />,
-    title: 'Chính sách',
-    subtitle: 'Bảo hành trên từng sản phẩm',
+    icon: <PolicyIcon fontSize="large" color="primary" />,
+    title: 'Secure Payment',
+    subtitle: 'Secured payment',
   },
 ]

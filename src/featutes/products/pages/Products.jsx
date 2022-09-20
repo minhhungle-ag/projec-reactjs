@@ -11,7 +11,7 @@ function Products(props) {
   const { categoryId } = useParams()
 
   useEffect(() => {
-    if (categoryId === 'tat-ca') {
+    if (categoryId === 'all') {
       setProducts(productList)
       return
     }

@@ -1,4 +1,3 @@
-import { Box, Toolbar } from '@mui/material'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import NotFound from './components/Common/NotFound'
 import MainLayout from './components/Layouts/MainLayout'
@@ -11,14 +10,14 @@ function App() {
   return (
     <MainLayout>
       <Routes>
-        <Route path="/" element={<Navigate to="trang-chu" />} />
-        <Route path="trang-chu" element={<HomePage />} />
-        <Route path="san-pham">
-          <Route index element={<Navigate to="tat-ca" />} />
+        <Route path="/" element={<Navigate to="home" />} />
+        <Route path="home" element={<HomePage />} />
+        <Route path="products">
+          <Route index element={<Navigate to="all" />} />
           <Route path=":categoryId" element={<Products />} />
         </Route>
-        <Route path="gioi-thieu" element={<About />} />
-        <Route path="lien-he" element={<Contact />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </MainLayout>

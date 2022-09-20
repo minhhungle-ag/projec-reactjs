@@ -1,5 +1,6 @@
-import { alpha, Box, Button, Container, Stack, Typography } from '@mui/material'
+import { Box, Container, Stack } from '@mui/material'
 import React from 'react'
+import AdvBanner from '../../../components/Common/AdvBanner'
 import Banner from '../../../components/Common/Banner'
 import { bannerList } from '../../../constants/bannerList'
 
@@ -21,28 +22,14 @@ function BannerList(props) {
               height: 360,
               borderRadius: '8px',
               overflow: 'hidden',
-
-              backgroundImage: `url('https://templatecat-megabyte.netlify.app/img/categories/sec-desktop-g.jpg')`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
             }}
           >
-            <Stack
-              alignItems="flex-start"
-              justifyContent="center"
-              spacing={2}
-              sx={{ p: 2, bgcolor: (theme) => alpha(theme.palette.common.black, 0.5) }}
-            >
-              <Typography variant="h5" fontWeight="bold" color="white">
-                BUILD PC THEO YÊU CẦU
-              </Typography>
-
-              <Typography variant="body1" fontWeight="bold" color="white">
-                Nhận xây dựng PC theo giá thành, theo nhu cầu khách hàng. Nhận máy sau 1 ngày.
-              </Typography>
-
-              <Button variant="contained">Xem ngay</Button>
-            </Stack>
+            <AdvBanner
+              title="ARMED PC GAMER"
+              subtitle=" Choose your pc and play!"
+              label="Shop now"
+              thumbnailUrl="https://templatecat-megabyte.netlify.app/img/categories/sec-desktop-g.jpg"
+            />
           </Box>
         </Stack>
       </Container>

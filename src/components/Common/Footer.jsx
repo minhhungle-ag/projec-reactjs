@@ -2,33 +2,30 @@ import CallIcon from '@mui/icons-material/Call'
 import EmailIcon from '@mui/icons-material/Email'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
+import PinterestIcon from '@mui/icons-material/Pinterest'
 import StoreIcon from '@mui/icons-material/Store'
-import { alpha, Box, Container, Divider, Stack, Typography } from '@mui/material'
-import { grey } from '@mui/material/colors'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import { Box, Container, Divider, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { categoryMenu, footerPageList } from '../../constants/common'
 import Logo from './Logo'
 
 const infoList = [
   {
-    desc: 'Chuyên cung cấp máy tính bàn, laptop, các sản phẩm dịch vụ tin học.',
-    icon: null,
+    desc: 'megabyte@example.com',
+    icon: <EmailIcon />,
   },
   {
-    desc: '0929414138 - 0903155357',
+    desc: '0101-010101',
     icon: <CallIcon />,
   },
   {
-    desc: '13 Thích Bửu Đăng, p.1, quận Gò Vấp, HCM',
+    desc: 'Colón 0101, Olavarría',
     icon: <StoreIcon />,
   },
 ]
 
 const socialListIcon = [
-  {
-    link: 'mailto:haless132@gmail.com',
-    icon: <EmailIcon />,
-  },
   {
     link: 'https://www.facebook.com/KH%E1%BA%A2I-PC-103287405865184',
     icon: <FacebookIcon />,
@@ -36,6 +33,14 @@ const socialListIcon = [
   {
     link: '',
     icon: <InstagramIcon />,
+  },
+  {
+    link: '',
+    icon: <TwitterIcon />,
+  },
+  {
+    link: '',
+    icon: <PinterestIcon />,
   },
 ]
 
@@ -81,7 +86,7 @@ function Footer(props) {
           <Box sx={{ py: 2, width: { xs: '100%', sm: 1 / 2, md: 'auto' }, flexGrow: 1 }}>
             <Stack spacing={2}>
               <Typography variant="h5" fontWeight="bold">
-                Tất cả sản phẩm
+                Products
               </Typography>
 
               <Stack spacing={1}>
@@ -98,7 +103,7 @@ function Footer(props) {
           <Box sx={{ py: 2, width: { xs: '100%', sm: 1 / 2, md: 'auto' }, flexGrow: 1 }}>
             <Stack spacing={2}>
               <Typography variant="h5" fontWeight="bold">
-                Về chúng tôi
+                About
               </Typography>
 
               <Stack spacing={1}>
@@ -115,7 +120,7 @@ function Footer(props) {
           <Box sx={{ py: 2, width: { xs: '100%', sm: 1 / 2, md: 'auto' } }}>
             <Stack spacing={2}>
               <Typography variant="h5" fontWeight="bold">
-                Mạng xã hội
+                Social
               </Typography>
 
               <Stack direction="row" alignItem="center" spacing={1}>

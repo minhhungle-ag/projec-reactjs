@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import { productList } from '../../../api/data_face'
-
 import { accessoryList, categoryList } from '../../../constants/common'
+import AdvBannerList from '../components/AdvBannerList'
 import BannerList from '../components/BannerList'
 import CategoryList from '../components/CategoryList'
 import ComputerCompany from '../components/ComputerCompany'
@@ -20,17 +20,22 @@ function HomePage(props) {
       </Box>
 
       <Box sx={{ my: 2 }}>
-        <CategoryList
-          title="Danh mục sản phẩm"
-          categoryList={[...categoryList, ...accessoryList]}
-        />
+        <CategoryList title="Category" categoryList={[...categoryList, ...accessoryList]} />
       </Box>
 
       <Box sx={{ my: 2 }}>
         <ProductList
-          title="Sản phẩm mới nhất"
+          title="Lastes products"
           productList={productList.filter((item, idx) => idx < 10)}
         />
+      </Box>
+
+      <Box sx={{ my: 2 }}>
+        <AdvBannerList />
+      </Box>
+
+      <Box sx={{ my: 2 }}>
+        <ProductList title="Sale off" productList={productList.filter((item, idx) => idx < 10)} />
       </Box>
 
       <Box sx={{ my: 2 }}>

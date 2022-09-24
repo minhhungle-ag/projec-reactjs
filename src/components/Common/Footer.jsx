@@ -5,7 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import PinterestIcon from '@mui/icons-material/Pinterest'
 import StoreIcon from '@mui/icons-material/Store'
 import TwitterIcon from '@mui/icons-material/Twitter'
-import { Box, Container, Divider, Stack, Typography } from '@mui/material'
+import { AppBar, Box, Container, Divider, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { categoryMenu, footerPageList } from '../../constants/common'
 import Logo from './Logo'
@@ -46,13 +46,10 @@ const socialListIcon = [
 
 function Footer(props) {
   return (
-    <Box
+    <AppBar
       component="footer"
-      color="inherit"
+      position="static"
       sx={{
-        color: 'white',
-        bgcolor: 'primary.main',
-
         '& a': {
           color: 'inherit',
           textDecoration: 'none',
@@ -145,11 +142,11 @@ function Footer(props) {
 
         <Stack justifyContent="center" alignItems="center" sx={{ py: 2 }}>
           <Typography variant="body2" textAlign="center">
-            © {new Date().getFullYear()} kcomputer.com. Power by Minh Hung Le.
+            © {new Date().getFullYear()} megabyte.com. Power by Minh Hung Le.
           </Typography>
         </Stack>
       </Container>
-    </Box>
+    </AppBar>
   )
 }
 

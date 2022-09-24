@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { productList } from '../../../api/data_face'
 import ProductList from '../components/ProductList'
-
+import ProductFilter from './ProductFilter'
+import ArrowRightIcon from '@mui/icons-material/ArrowRight'
 Products.propTypes = {}
 
 function Products(props) {
@@ -13,6 +14,7 @@ function Products(props) {
   useEffect(() => {
     if (categoryId === 'all') {
       setProducts(productList)
+
       return
     }
 
@@ -23,17 +25,18 @@ function Products(props) {
     <Box>
       <Container>
         <Box sx={{ my: 2 }}>
-          <Typography variant="h4" fontWeight="bold">
-            Sản phẩm
+          <Typography variant="h4" fontWeight="bold" display="flex" alignItems="center">
+            Shops <ArrowRightIcon color="primary" fontSize="large" />
+            {categoryId}
           </Typography>
         </Box>
 
-        <Stack direction="row" spacing={2} sx={{ my: 2 }}>
-          <Box boxShadow={1} sx={{ width: 1 / 4, height: '100%', my: 1, p: 2 }}>
-            Filter
+        <Stack spacing={2} sx={{ my: 2 }}>
+          <Box>
+            <ProductFilter />
           </Box>
 
-          <Box sx={{ width: 3 / 4 }}>
+          <Box>
             <ProductList productList={products} />
           </Box>
         </Stack>

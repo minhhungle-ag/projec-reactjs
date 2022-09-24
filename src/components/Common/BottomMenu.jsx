@@ -32,7 +32,7 @@ function BottomMenu() {
               }}
             >
               <NavLink
-                to={`san-pham/${item.link}`}
+                to={`products/${item.link}`}
                 className={({ isActive }) => (isActive ? 'active' : '')}
               >
                 <Box sx={{ textAlign: 'center' }}>

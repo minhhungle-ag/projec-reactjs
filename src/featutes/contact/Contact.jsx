@@ -1,10 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
 
-Contact.propTypes = {};
+Contact.propTypes = {}
 
 function Contact(props) {
-  return <div>Contact</div>;
+  return <div>Contact</div>
 }
 
-export default Contact;
+export default Contact

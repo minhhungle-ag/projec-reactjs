@@ -79,7 +79,7 @@ function MainLayout({ children, ...props }) {
         </Box>
 
         <Box sx={{ display: { md: 'none' } }}>
-          <Toolbar sx={{ my: 1 }} />
+          <Toolbar sx={{ my: 0.5 }} />
           <BottomMenu />
         </Box>
       </Stack>

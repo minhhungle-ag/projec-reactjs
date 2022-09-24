@@ -1,7 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { alpha, Box, Button, Stack, Typography } from '@mui/material'
-import { TitleRounded } from '@mui/icons-material'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 AdvBanner.propTypes = {
   thumbnailUrl: PropTypes.string,
